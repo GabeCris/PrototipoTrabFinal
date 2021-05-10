@@ -1,0 +1,35 @@
+
+#root{
+    -fx-padding: 20;
+    -fx-background-color: blue;
+}
+
+#fundo{
+    -fx-background-color: blue;
+}
+
+
+
+.redondo{
+    -fx-border-radius: 50;
+    -fx-background-radius: 50;
+    -fx-cursor: crosshair;
+}
+
+.vermelho{
+    -fx-background-color: red;
+}
+
+.verde{
+    -fx-background-color: white;
+
+}
+
+.amarelo{
+    -fx-background-color: yellow;
+}
+
+.clicado{
+    -fx-cursor:closed_hand;
+}
+
