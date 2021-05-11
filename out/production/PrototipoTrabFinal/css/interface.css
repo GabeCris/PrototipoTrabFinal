@@ -1,6 +1,6 @@
 
 #root{
-    -fx-padding: 20;
+    -fx-padding: 10;
     -fx-background-color: blue;
 }
 
@@ -13,7 +13,9 @@
 .redondo{
     -fx-border-radius: 50;
     -fx-background-radius: 50;
-    -fx-cursor: crosshair;
+    -fx-cursor: closed_hand;
+    -fx-border-width: 3;
+    -fx-border-color: black;
 }
 
 .vermelho{
@@ -30,6 +32,6 @@
 }
 
 .clicado{
-    -fx-cursor:closed_hand;
+    -fx-cursor:move;
 }
 
