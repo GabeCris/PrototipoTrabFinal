@@ -59,6 +59,7 @@ public class Janela extends Jogo{
 
         Pane source = (Pane) event.getSource();
 
+
         for (i = 0; i< N_COLS; i++) {
             for (j = 0; j < N_LIN; j++) {
                 if (panes[i][j].equals(source) && matriz[i][j] != 1 && matriz[i][j] != 2) {
@@ -78,10 +79,9 @@ public class Janela extends Jogo{
         }
 
 
-
         colocarPeca();
-        //verificaVencedor();
         quadradinho();
+
 
 
 
