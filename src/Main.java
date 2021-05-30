@@ -11,21 +11,42 @@ public class Main extends Application {
     public static void main(String[] args) {
         launch(args);
     }
+    
+    private static Scene sceneJogo, sceneMenu, sceneVencedor;
+    private static Stage stage;
 
 
     @Override
-    public void start(Stage stage) throws Exception {
+    public void start(Stage primaryStage) throws Exception {
+        stage = primaryStage;
 
-        FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(Main.class.getResource("/fxml/janelinha.fxml"));
+        Parent fxmlMain = FXMLLoader.load(getClass().getResource("/fxml/janelinhaMain.fxml"));
+        sceneMenu = new Scene(fxmlMain, 600,550);
 
-        Parent root = loader.load();
+        Parent fxmlJogo = FXMLLoader.load(getClass().getResource("/fxml/janelinhaJogo.fxml"));
+        sceneJogo = new Scene(fxmlJogo, 600,550);
 
-        stage.setTitle("CONNECT 4");
-        stage.setScene(new Scene(root, 550,600));
+        Parent fxmlVencedor = FXMLLoader.load(getClass().getResource("/fxml/janelinhaVencedor.fxml"));
+        sceneVencedor = new Scene(fxmlVencedor, 600,550);
 
+        primaryStage.setScene(sceneMenu);
+        primaryStage.show();
 
-        stage.show();
+    }
 
+    public static void mudaCena(String src){
+        JanelaJogo.inicializaMatriz();
+        JanelaJogo.colocarPeca();
+        switch (src){
+            case "menu":
+                stage.setScene(sceneMenu);
+                break;
+            case "vencedor":
+                stage.setScene(sceneVencedor);
+                break;
+            case "jogo":
+                stage.setScene(sceneJogo);
+                break;
+        }
     }
 }

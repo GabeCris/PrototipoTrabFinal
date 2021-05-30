@@ -1,19 +1,20 @@
 import javafx.scene.control.Alert;
 
+
 public class Jogo extends Exception{
     public static int N_COLS = 7;
     public static int N_LIN = 6;
 
-    public int[][] matriz;
+    public static int[][] matriz;
     public int vez = 0;
 
     public Jogo(){
         matriz = new int[N_COLS][N_LIN];
         inicializaMatriz();
-
     }
 
-    public void inicializaMatriz() {
+
+    public static void inicializaMatriz() {
         for (int i = 0; i < N_COLS; i++) {
             for (int j = 0; j < N_LIN; j++) {
                 matriz[i][j] = 0;
@@ -35,7 +36,7 @@ public class Jogo extends Exception{
 
     }
 
-    public void colocarPeca(){
+    public static void colocarPeca(){
         for (int i = 0; i< N_COLS; i++){
             for (int j = 0; j< N_LIN; j++){
                 String classe="";
@@ -47,8 +48,8 @@ public class Jogo extends Exception{
                     case 2:classe="amarelo";
                         break;
                 }
-                Janela.panes[i][j].getStyleClass().removeAll("vermelho","verde","amarelo");
-                Janela.panes[i][j].getStyleClass().add(classe);
+                JanelaJogo.panes[i][j].getStyleClass().removeAll("vermelho","verde","amarelo");
+                JanelaJogo.panes[i][j].getStyleClass().add(classe);
 
             }
         }
@@ -73,7 +74,8 @@ public class Jogo extends Exception{
                         matriz[i][j+2] == player &&
                         matriz[i][j+3] == player){
                     System.out.println("GANHOU");
-                    abrirAlert();
+                    JanelaJogo.janelaVencedor();
+                    //abrirAlert();
                 }
             }
         }
@@ -85,7 +87,8 @@ public class Jogo extends Exception{
                         matriz[i+2][j] == player &&
                         matriz[i+3][j] == player){
                     System.out.println("GANHOU");
-                    abrirAlert();
+                    JanelaJogo.janelaVencedor();
+                    //abrirAlert();
                 }
             }
         }
@@ -97,7 +100,8 @@ public class Jogo extends Exception{
                         matriz[i-2][j+2] == player &&
                         matriz[i-3][j+3] == player){
                     System.out.println("GANHOU");
-                    abrirAlert();
+                    JanelaJogo.janelaVencedor();
+                    //abrirAlert();
                 }
             }
         }
@@ -109,12 +113,14 @@ public class Jogo extends Exception{
                         matriz[i+2][j+2] == player &&
                         matriz[i+3][j+3] == player){
                     System.out.println("GANHOU");
-                    abrirAlert();
+                    JanelaJogo.janelaVencedor();
+                    //abrirAlert();
                 }
             }
         }
 
     }
+
 
     public void abrirAlert(){
 

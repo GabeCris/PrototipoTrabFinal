@@ -8,7 +8,7 @@ import javafx.scene.text.Text;
 
 import java.util.Random;
 
-public class Janela extends Jogo{
+public class JanelaJogo extends Jogo{
 
     @FXML
     private GridPane root;
@@ -23,7 +23,7 @@ public class Janela extends Jogo{
 
     private Random rnd;
 
-    public Janela() {
+    public JanelaJogo() {
         rnd = new Random();
         panes = new Pane[N_COLS][N_LIN];
     }
@@ -65,7 +65,7 @@ public class Janela extends Jogo{
                 if (panes[i][j].equals(source) && matriz[i][j] != 1 && matriz[i][j] != 2) {
                     if(j == N_LIN -1 || matriz[i][j+1] ==  1 || matriz[i][j+1] == 2) {
                         jogadorDaVez(i, j);
-                        Janela.panes[i][j].getStyleClass().add("clicado");
+                        JanelaJogo.panes[i][j].getStyleClass().add("clicado");
                         invalida.setText("...");
 
                     }
@@ -96,5 +96,10 @@ public class Janela extends Jogo{
             rtg.setFill(Color.YELLOW);
         }
 
+    }
+
+    public static void janelaVencedor(){
+        Main.mudaCena("vencedor");
+        System.out.println("TESTANDO");
     }
 }
