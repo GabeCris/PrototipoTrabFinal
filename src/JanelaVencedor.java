@@ -10,6 +10,8 @@ public class JanelaVencedor{
         Main.mudaCena("menu");
     }
 
+
+
     @FXML
     protected void jogo(ActionEvent e){
         Main.mudaCena("jogo");

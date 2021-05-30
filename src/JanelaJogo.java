@@ -1,4 +1,5 @@
 import javafx.fxml.FXML;
+import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
@@ -18,6 +19,12 @@ public class JanelaJogo extends Jogo{
 
     @FXML
     private Text invalida;
+
+    @FXML
+    public static Label plc1;
+
+    @FXML
+    public static Label plc2;
 
     public static Pane[][] panes;
 
@@ -98,8 +105,34 @@ public class JanelaJogo extends Jogo{
 
     }
 
+    @FXML
     public static void janelaVencedor(){
         Main.mudaCena("vencedor");
         System.out.println("TESTANDO");
     }
+
+
+
+    public static void placar(){
+        int p1 = 0;
+        int p2 = 0;
+
+        if(player == 1){
+            p1++;
+        }
+
+        if(player == 2){
+            p2++;
+        }
+
+        System.out.println("JOGADOR 1:"+p1);
+        System.out.println("JOGADOR 2:"+p2);
+
+        plc1.setText(String.valueOf(p1));
+        plc2.setText(String.valueOf(p2));
+    }
+
+
+
+
 }

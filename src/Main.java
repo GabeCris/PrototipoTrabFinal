@@ -21,13 +21,13 @@ public class Main extends Application {
         stage = primaryStage;
 
         Parent fxmlMain = FXMLLoader.load(getClass().getResource("/fxml/janelinhaMain.fxml"));
-        sceneMenu = new Scene(fxmlMain, 600,550);
+        sceneMenu = new Scene(fxmlMain, 550,600);
 
         Parent fxmlJogo = FXMLLoader.load(getClass().getResource("/fxml/janelinhaJogo.fxml"));
-        sceneJogo = new Scene(fxmlJogo, 600,550);
+        sceneJogo = new Scene(fxmlJogo, 550,600);
 
         Parent fxmlVencedor = FXMLLoader.load(getClass().getResource("/fxml/janelinhaVencedor.fxml"));
-        sceneVencedor = new Scene(fxmlVencedor, 600,550);
+        sceneVencedor = new Scene(fxmlVencedor, 550,600);
 
         primaryStage.setScene(sceneMenu);
         primaryStage.show();
