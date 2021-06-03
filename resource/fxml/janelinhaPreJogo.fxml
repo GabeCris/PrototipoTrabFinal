@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="fundo" stylesheets="@/css/interface.css" prefHeight="600.0" prefWidth="550.0" xmlns="http://javafx.com/javafx/" xmlns:fx="http://javafx.com/fxml/1" fx:controller="JanelaPreJogo">
+   <children>
+      <Text fill="WHITE" layoutX="65.0" layoutY="171.0" stroke="BLACK" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="3.0" text="Player 1" wrappingWidth="134.4404296875">
+         <font>
+            <Font name="Arial Black" size="22.0" />
+         </font>
+      </Text>
+      <TextField alignment="CENTER" layoutX="179.0" layoutY="143.0" prefHeight="39.0" prefWidth="295.0" promptText="Informe o nome do player 1">
+         <font>
+            <Font name="Arial Black" size="18.0" />
+         </font></TextField>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="RED" height="31.0" layoutX="107.0" layoutY="208.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="3.0" width="32.0" />
+      <RadioButton fx:id="redP1" layoutX="115.0" layoutY="214.0" mnemonicParsing="false" textFill="#c60000">
+         <toggleGroup>
+            <ToggleGroup fx:id="pecaP1" />
+         </toggleGroup></RadioButton>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="BLUE" height="31.0" layoutX="158.0" layoutY="208.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="3.0" width="32.0" />
+      <RadioButton fx:id="blueP1" layoutX="166.0" layoutY="214.0" mnemonicParsing="false" textFill="#c60000" toggleGroup="$pecaP1" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="GREEN" height="31.0" layoutX="209.0" layoutY="208.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="3.0" width="32.0" />
+      <RadioButton fx:id="greenP1" layoutX="217.0" layoutY="214.0" mnemonicParsing="false" textFill="#c60000" toggleGroup="$pecaP1" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="YELLOW" height="31.0" layoutX="262.0" layoutY="208.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="3.0" width="32.0" />
+      <RadioButton fx:id="yellowP1" layoutX="270.0" layoutY="214.0" mnemonicParsing="false" textFill="#c60000" toggleGroup="$pecaP1" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="PURPLE" height="31.0" layoutX="318.0" layoutY="208.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="3.0" width="32.0" />
+      <RadioButton fx:id="purpleP1" layoutX="326.0" layoutY="214.0" mnemonicParsing="false" textFill="#c60000" toggleGroup="$pecaP1" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="GREY" height="31.0" layoutX="370.0" layoutY="208.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="3.0" width="32.0" />
+      <RadioButton fx:id="grayP1" layoutX="378.0" layoutY="214.0" mnemonicParsing="false" textFill="#c60000" toggleGroup="$pecaP1" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="ORANGE" height="31.0" layoutX="422.0" layoutY="207.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="3.0" width="32.0" />
+      <RadioButton fx:id="orangeP1" layoutX="430.0" layoutY="213.0" mnemonicParsing="false" textFill="#c60000" toggleGroup="$pecaP1" />
+      <Text fill="WHITE" layoutX="63.0" layoutY="319.0" stroke="BLACK" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="3.0" text="Player 2" wrappingWidth="134.4404296875">
+         <font>
+            <Font name="Arial Black" size="22.0" />
+         </font>
+      </Text>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="RED" height="31.0" layoutX="107.0" layoutY="356.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="3.0" width="32.0" />
+      <RadioButton fx:id="redP2" layoutX="115.0" layoutY="362.0" mnemonicParsing="false" textFill="#c60000">
+         <toggleGroup>
+            <ToggleGroup fx:id="pecaP2" />
+         </toggleGroup></RadioButton>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="BLUE" height="31.0" layoutX="158.0" layoutY="356.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="3.0" width="32.0" />
+      <RadioButton fx:id="blueP2" layoutX="166.0" layoutY="362.0" mnemonicParsing="false" textFill="#c60000" toggleGroup="$pecaP2" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="GREEN" height="31.0" layoutX="209.0" layoutY="356.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="3.0" width="32.0" />
+      <RadioButton fx:id="greenP2" layoutX="217.0" layoutY="362.0" mnemonicParsing="false" textFill="#c60000" toggleGroup="$pecaP2" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="YELLOW" height="31.0" layoutX="262.0" layoutY="356.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="3.0" width="32.0" />
+      <RadioButton fx:id="yellowP2" layoutX="270.0" layoutY="362.0" mnemonicParsing="false" textFill="#c60000" toggleGroup="$pecaP2" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="PURPLE" height="31.0" layoutX="318.0" layoutY="356.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="3.0" width="32.0" />
+      <RadioButton fx:id="purpleP2" layoutX="326.0" layoutY="362.0" mnemonicParsing="false" textFill="#c60000" toggleGroup="$pecaP2" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="GREY" height="31.0" layoutX="370.0" layoutY="356.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="3.0" width="32.0" />
+      <RadioButton fx:id="grayP2" layoutX="378.0" layoutY="362.0" mnemonicParsing="false" textFill="#c60000" toggleGroup="$pecaP2" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="ORANGE" height="31.0" layoutX="422.0" layoutY="355.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="3.0" width="32.0" />
+      <RadioButton fx:id="orangeP2" layoutX="430.0" layoutY="361.0" mnemonicParsing="false" textFill="#c60000" toggleGroup="$pecaP2" />
+      <Text fill="WHITE" layoutX="156.0" layoutY="98.0" stroke="BLACK" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="3.0" text="OPÇÕES " textAlignment="CENTER" wrappingWidth="237.4404296875">
+         <font>
+            <Font name="Arial Black" size="35.0" />
+         </font>
+      </Text>
+      <Button layoutX="117.0" layoutY="444.0" mnemonicParsing="false" onAction="#menu" prefHeight="71.0" prefWidth="136.0" style="-fx-border-radius: 150; -fx-border-width: 4; -fx-border-color: white; -fx-background-radius: 150; -fx-background-color: blue;" text="MENU PRINCIPAL" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="Arial Black" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="310.0" layoutY="444.0" mnemonicParsing="false" onAction="#jogo" prefHeight="71.0" prefWidth="136.0" style="-fx-border-radius: 150; -fx-border-width: 4; -fx-border-color: white; -fx-background-radius: 150; -fx-background-color: blue;" text="JOGAR" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="Arial Black" size="12.0" />
+         </font>
+      </Button>
+      <TextField alignment="CENTER" layoutX="180.0" layoutY="291.0" prefHeight="39.0" prefWidth="295.0" promptText="Informe o nome do player 2">
+         <font>
+            <Font name="Arial Black" size="18.0" />
+         </font>
+      </TextField>
+   </children>
+</AnchorPane>

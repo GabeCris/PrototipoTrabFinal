@@ -5,6 +5,6 @@ public class JanelaMain {
 
     @FXML
     protected void click(ActionEvent e){
-        Main.mudaCena("jogo");
+        Main.mudaCena("prejogo");
     }
 }

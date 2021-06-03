@@ -12,7 +12,7 @@ public class Main extends Application {
         launch(args);
     }
     
-    private static Scene sceneJogo, sceneMenu, sceneVencedor;
+    private static Scene sceneJogo, sceneMenu, sceneVencedor, scenePreJogo;
     private static Stage stage;
 
 
@@ -20,14 +20,17 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception {
         stage = primaryStage;
 
-        Parent fxmlMain = FXMLLoader.load(getClass().getResource("/fxml/janelinhaMain.fxml"));
+        Parent fxmlMain = FXMLLoader.load(getClass().getResource("fxml/janelinhaMain.fxml"));
         sceneMenu = new Scene(fxmlMain, 550,600);
 
-        Parent fxmlJogo = FXMLLoader.load(getClass().getResource("/fxml/janelinhaJogo.fxml"));
+        Parent fxmlJogo = FXMLLoader.load(getClass().getResource("fxml/janelinhaJogo.fxml"));
         sceneJogo = new Scene(fxmlJogo, 550,600);
 
-        Parent fxmlVencedor = FXMLLoader.load(getClass().getResource("/fxml/janelinhaVencedor.fxml"));
+        Parent fxmlVencedor = FXMLLoader.load(getClass().getResource("fxml/janelinhaVencedor.fxml"));
         sceneVencedor = new Scene(fxmlVencedor, 550,600);
+
+        Parent fxmlPreJogo = FXMLLoader.load(getClass().getResource("fxml/janelinhaPreJogo.fxml"));
+        scenePreJogo = new Scene(fxmlPreJogo, 550,600);
 
         primaryStage.setScene(sceneMenu);
         primaryStage.show();
@@ -46,6 +49,9 @@ public class Main extends Application {
                 break;
             case "jogo":
                 stage.setScene(sceneJogo);
+                break;
+            case "prejogo":
+                stage.setScene(scenePreJogo);
                 break;
         }
     }

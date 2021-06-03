@@ -18,6 +18,12 @@ public class JanelaJogo extends Jogo{
     public Rectangle rtg;
 
     @FXML
+    public Rectangle rtg11;
+
+    @FXML
+    public Rectangle rtg22;
+
+    @FXML
     private Text invalida;
 
     @FXML
@@ -30,21 +36,24 @@ public class JanelaJogo extends Jogo{
 
     private Random rnd;
 
+    /*public JanelaJogo(int p1, int p2) {
+        super(p1,p2);
+        rnd = new Random();
+        panes = new Pane[N_COLS][N_LIN];
+    }*/
+
     public JanelaJogo() {
         rnd = new Random();
         panes = new Pane[N_COLS][N_LIN];
+
     }
 
     public void initialize() {
         inicializaGridPane();
         colocarPeca();
 
-        if(vez %2==0){
-            rtg.setFill(Color.RED);
-        }
-
-        else{
-            rtg.setFill(Color.YELLOW);
+        if(vez % 2 == 0){
+            quadradinho();
         }
     }
 
@@ -94,13 +103,74 @@ public class JanelaJogo extends Jogo{
 
     }
 
+
     public void quadradinho(){
-        if(vez %2==0){
-            rtg.setFill(Color.RED);
+        System.out.println("ENTROU PRIMEIRO");
+        if(vez %2 ==0) {
+            switch (JanelaPreJogo.opcaoP1) {
+                case 1:
+                    rtg.setFill(Color.RED);
+                    rtg11.setFill(Color.RED);
+                    break;
+                case 2:
+                    rtg.setFill(Color.BLUE);
+                    rtg11.setFill(Color.BLUE);
+                    break;
+                case 3:
+                    rtg.setFill(Color.GREEN);
+                    rtg11.setFill(Color.GREEN);
+                    break;
+                case 4:
+                    rtg.setFill(Color.YELLOW);
+                    rtg11.setFill(Color.YELLOW);
+                    break;
+                case 5:
+                    rtg.setFill(Color.PURPLE);
+                    rtg11.setFill(Color.PURPLE);
+                    break;
+                case 6:
+                    rtg.setFill(Color.GRAY);
+                    rtg11.setFill(Color.GRAY);
+
+                    break;
+                case 7:
+                    rtg.setFill(Color.ORANGE);
+                    rtg11.setFill(Color.ORANGE);
+                    break;
+            }
         }
 
-        else{
-            rtg.setFill(Color.YELLOW);
+        else if(vez %2 !=0){
+            switch (JanelaPreJogo.opcaoP2) {
+                case 1:
+                    rtg.setFill(Color.RED);
+                    rtg22.setFill(Color.RED);
+                    break;
+                case 2:
+                    rtg.setFill(Color.BLUE);
+                    rtg22.setFill(Color.BLUE);
+                    break;
+                case 3:
+                    rtg.setFill(Color.GREEN);
+                    rtg22.setFill(Color.GREEN);
+                    break;
+                case 4:
+                    rtg.setFill(Color.YELLOW);
+                    rtg22.setFill(Color.YELLOW);
+                    break;
+                case 5:
+                    rtg.setFill(Color.PURPLE);
+                    rtg22.setFill(Color.PURPLE);
+                    break;
+                case 6:
+                    rtg.setFill(Color.GRAY);
+                    rtg22.setFill(Color.GRAY);
+                    break;
+                case 7:
+                    rtg.setFill(Color.ORANGE);
+                    rtg22.setFill(Color.ORANGE);
+                    break;
+            }
         }
 
     }
@@ -109,27 +179,6 @@ public class JanelaJogo extends Jogo{
     public static void janelaVencedor(){
         Main.mudaCena("vencedor");
         System.out.println("TESTANDO");
-    }
-
-
-
-    public static void placar(){
-        int p1 = 0;
-        int p2 = 0;
-
-        if(player == 1){
-            p1++;
-        }
-
-        if(player == 2){
-            p2++;
-        }
-
-        System.out.println("JOGADOR 1:"+p1);
-        System.out.println("JOGADOR 2:"+p2);
-
-        plc1.setText(String.valueOf(p1));
-        plc2.setText(String.valueOf(p2));
     }
 
 
