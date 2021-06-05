@@ -27,20 +27,15 @@ public class JanelaJogo extends Jogo{
     private Text invalida;
 
     @FXML
-    public static Label plc1;
+    public Label plc1;
 
     @FXML
-    public static Label plc2;
+    public Label plc2;
 
     public static Pane[][] panes;
 
     private Random rnd;
 
-    /*public JanelaJogo(int p1, int p2) {
-        super(p1,p2);
-        rnd = new Random();
-        panes = new Pane[N_COLS][N_LIN];
-    }*/
 
     public JanelaJogo() {
         rnd = new Random();
@@ -113,29 +108,21 @@ public class JanelaJogo extends Jogo{
                     rtg11.setFill(Color.RED);
                     break;
                 case 2:
-                    rtg.setFill(Color.BLUE);
-                    rtg11.setFill(Color.BLUE);
-                    break;
-                case 3:
                     rtg.setFill(Color.GREEN);
                     rtg11.setFill(Color.GREEN);
                     break;
-                case 4:
+                case 3:
                     rtg.setFill(Color.YELLOW);
                     rtg11.setFill(Color.YELLOW);
                     break;
-                case 5:
+                case 4:
                     rtg.setFill(Color.PURPLE);
                     rtg11.setFill(Color.PURPLE);
                     break;
-                case 6:
+                case 5:
                     rtg.setFill(Color.GRAY);
                     rtg11.setFill(Color.GRAY);
 
-                    break;
-                case 7:
-                    rtg.setFill(Color.ORANGE);
-                    rtg11.setFill(Color.ORANGE);
                     break;
             }
         }
@@ -147,28 +134,20 @@ public class JanelaJogo extends Jogo{
                     rtg22.setFill(Color.RED);
                     break;
                 case 2:
-                    rtg.setFill(Color.BLUE);
-                    rtg22.setFill(Color.BLUE);
-                    break;
-                case 3:
                     rtg.setFill(Color.GREEN);
                     rtg22.setFill(Color.GREEN);
                     break;
-                case 4:
+                case 3:
                     rtg.setFill(Color.YELLOW);
                     rtg22.setFill(Color.YELLOW);
                     break;
-                case 5:
+                case 4:
                     rtg.setFill(Color.PURPLE);
                     rtg22.setFill(Color.PURPLE);
                     break;
-                case 6:
+                case 5:
                     rtg.setFill(Color.GRAY);
                     rtg22.setFill(Color.GRAY);
-                    break;
-                case 7:
-                    rtg.setFill(Color.ORANGE);
-                    rtg22.setFill(Color.ORANGE);
                     break;
             }
         }

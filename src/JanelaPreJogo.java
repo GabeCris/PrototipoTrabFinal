@@ -1,8 +1,12 @@
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.RadioButton;
+import javafx.scene.control.TextField;
+import javafx.scene.control.ToggleGroup;
+import javafx.scene.input.MouseEvent;
 
-public class JanelaPreJogo{
+public class JanelaPreJogo extends Jogo{
 
     @FXML
     public RadioButton redP1;
@@ -47,16 +51,41 @@ public class JanelaPreJogo{
     public RadioButton orangeP2;
 
     @FXML
+    public ToggleGroup pecaP1;
+
+    @FXML
+    public TextField nomeP1;
+
+    @FXML
+    public TextField nomeP2;
+
+    @FXML
+    public Button jogar;
+
+    @FXML
+    public Button mainmenu;
+
+
+    public void clicou(MouseEvent event){
+        mainmenu.getStyleClass().add("fundoBotao");
+
+        jogar.getStyleClass().add("fundoBotao");
+    }
+
+    @FXML
     protected void menu(ActionEvent e){
+        jogar.setOnMouseClicked((evt)->clicou(evt));
+
 
         Main.mudaCena("menu");
     }
 
     @FXML
-    protected void jogo(ActionEvent e){
+    public void jogo(ActionEvent e){
 
         pecaPlayer1();
         pecaPlayer2();
+
         Main.mudaCena("jogo");
     }
 
@@ -64,35 +93,27 @@ public class JanelaPreJogo{
     public static int opcaoP2;
 
     public void pecaPlayer1(){
-
         if(redP1.isSelected()){
             opcaoP1 = 1;
         }
 
-        if(blueP1.isSelected()){
+        if(greenP1.isSelected()){
             opcaoP1 = 2;
         }
 
-        if(greenP1.isSelected()){
-            opcaoP1 = 3;
-        }
-
         if(yellowP1.isSelected()){
-            opcaoP1 = 4;
+            opcaoP1 = 3;
         }
 
 
         if(purpleP1.isSelected()){
-            opcaoP1 = 5;
+            opcaoP1 = 4;
         }
 
         if(grayP1.isSelected()){
-            opcaoP1 = 6;
+            opcaoP1 = 5;
         }
 
-        if(orangeP1.isSelected()){
-            opcaoP1 = 7;
-        }
     }
 
     public void pecaPlayer2(){
@@ -101,28 +122,21 @@ public class JanelaPreJogo{
             opcaoP2 = 1;
         }
 
-        if(blueP2.isSelected()){
-            opcaoP2 = 2;
-        }
         if(greenP2.isSelected()){
-            opcaoP2 = 3;
+            opcaoP2 = 2;
         }
 
         if(yellowP2.isSelected()){
-            opcaoP2 = 4;
+            opcaoP2 = 3;
         }
 
 
         if(purpleP2.isSelected()){
-            opcaoP2 = 5;
+            opcaoP2 = 4;
         }
 
         if(grayP2.isSelected()){
-            opcaoP2 = 6;
-        }
-
-        if(orangeP2.isSelected()){
-            opcaoP2 = 7;
+            opcaoP2 = 5;
         }
     }
 }

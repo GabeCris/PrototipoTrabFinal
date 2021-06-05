@@ -1,4 +1,3 @@
-import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 
 
@@ -9,25 +8,28 @@ public class Jogo extends Exception{
     public static int[][] matriz;
     public int vez = 0;
 
+    public String nomePlayer1;
+    public String nomePlayer2;
+
+
     public int p1;
     public int p2;
-
-    /*public Jogo(int p1, int p2){
-        matriz = new int[N_COLS][N_LIN];
-        inicializaMatriz();
-        this.p1 = p1;
-        this.p2 = p2;
-    }*/
 
     public Jogo(){
         matriz = new int[N_COLS][N_LIN];
         inicializaMatriz();
+
+        //System.out.println("Nome player 1: "+nomePlayer1);
+
+        //System.out.println("Nome player 2: "+nomePlayer2);
     }
 
 
 
 
     public static void inicializaMatriz() {
+
+
         for (int i = 0; i < N_COLS; i++) {
             for (int j = 0; j < N_LIN; j++) {
                 matriz[i][j] = 0;
@@ -60,22 +62,16 @@ public class Jogo extends Exception{
                                 classe = "vermelho";
                                 break;
                             case 2:
-                                classe = "azul";
-                                break;
-                            case 3:
                                 classe = "verde";
                                 break;
-                            case 4:
+                            case 3:
                                 classe = "amarelo";
                                 break;
-                            case 5:
+                            case 4:
                                 classe = "roxo";
                                 break;
-                            case 6:
+                            case 5:
                                 classe = "cinza";
-                                break;
-                            case 7:
-                                classe = "laranja";
                                 break;
                         }
                         break;
@@ -86,22 +82,16 @@ public class Jogo extends Exception{
                                 classe = "vermelho";
                                 break;
                             case 2:
-                                classe = "azul";
-                                break;
-                            case 3:
                                 classe = "verde";
                                 break;
-                            case 4:
+                            case 3:
                                 classe = "amarelo";
                                 break;
-                            case 5:
+                            case 4:
                                 classe = "roxo";
                                 break;
-                            case 6:
+                            case 5:
                                 classe = "cinza";
-                                break;
-                            case 7:
-                                classe = "laranja";
                                 break;
                         }
                         break;
@@ -138,7 +128,6 @@ public class Jogo extends Exception{
                     placar();
 
                     JanelaJogo.janelaVencedor();
-                    //abrirAlert();
                 }
             }
         }
@@ -152,7 +141,6 @@ public class Jogo extends Exception{
                     System.out.println("GANHOU");
                     placar();
                     JanelaJogo.janelaVencedor();
-                    //abrirAlert();
                 }
             }
         }
@@ -166,7 +154,6 @@ public class Jogo extends Exception{
                     System.out.println("GANHOU");
                     placar();
                     JanelaJogo.janelaVencedor();
-                    //abrirAlert();
                 }
             }
         }
@@ -180,14 +167,13 @@ public class Jogo extends Exception{
                     System.out.println("GANHOU");
                     placar();
                     JanelaJogo.janelaVencedor();
-                    //abrirAlert();
                 }
             }
         }
 
     }
 
-    public void placar(){
+    public int[] placar(){
         System.out.println("ENTROU NO PLACAR");
         if(vez %2 == 0){
             p1++;
@@ -197,8 +183,22 @@ public class Jogo extends Exception{
             p2++;
         }
 
+
         System.out.println("PLACAR PLAYER 1: "+p1);
         System.out.println("PLACAR PLAYER 2: "+p2);
+
+        int placares[];
+        placares = new int[2];
+
+        placares[0] = p1;
+
+        placares[1] = p2;
+
+        System.out.println(placares[0]);
+
+        System.out.println(placares[1]);
+
+        return placares;
     }
 
 

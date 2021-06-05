@@ -13,7 +13,7 @@
 .redondo{
     -fx-border-radius: 50;
     -fx-background-radius: 50;
-    -fx-cursor: closed_hand;
+    -fx-cursor: hand;
     -fx-border-width: 3;
     -fx-border-color: black;
 }
@@ -22,7 +22,7 @@
     -fx-background-color: red;
 }
 
-.verde{
+.branco{
     -fx-background-color: white;
 
 }
@@ -31,7 +31,31 @@
     -fx-background-color: yellow;
 }
 
+.azul{
+    -fx-background-color: blue;
+}
+
+.verde{
+    -fx-background-color: green;
+}
+
+.roxo{
+    -fx-background-color: purple;
+}
+
+.cinza{
+    -fx-background-color: gray;
+}
+
+.laranja{
+    -fx-background-color: orange;
+}
+
 .clicado{
-    -fx-cursor:move;
+    -fx-cursor:grabbing;
+}
+
+.fundoBotao{
+    -fx-background-color: white;
 }
 

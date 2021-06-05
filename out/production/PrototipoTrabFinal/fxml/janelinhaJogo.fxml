@@ -26,8 +26,8 @@
             <Font name="Arial Black" size="16.0" />
          </font>
       </Text>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="RED" height="40.0" layoutX="115.0" layoutY="541.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="3.0" width="41.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f2ff00" height="40.0" layoutX="170.0" layoutY="541.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="3.0" width="41.0" />
+      <Rectangle fx:id="rtg11" arcHeight="5.0" arcWidth="5.0" fill="RED" height="40.0" layoutX="115.0" layoutY="541.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="3.0" width="41.0" />
+      <Rectangle fx:id="rtg22" arcHeight="5.0" arcWidth="5.0" fill="#f2ff00" height="40.0" layoutX="170.0" layoutY="541.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="3.0" width="41.0" />
       <Label fx:id="plc1" alignment="CENTER" layoutX="115.0" layoutY="541.0" prefHeight="40.0" prefWidth="41.0" text="0" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font size="24.0" />
