@@ -5,8 +5,9 @@ import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleGroup;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.paint.Color;
 
-public class JanelaPreJogo extends Jogo{
+public class JanelaPreJogo{
 
     @FXML
     public RadioButton redP1;
@@ -65,6 +66,19 @@ public class JanelaPreJogo extends Jogo{
     @FXML
     public Button mainmenu;
 
+    private Color[] cores = {Color.RED, Color.GRAY, Color.YELLOW, Color.BLUE, Color.PURPLE};
+
+    private Jogador jogador1;
+    private Jogador jogador2;
+
+    private Jogo jogo;
+
+    public JanelaPreJogo(){
+        this.jogador1 = new Jogador();
+        this.jogador2 = new Jogador();
+        this.jogo = new Jogo(jogador1, jogador2);
+
+    }
 
     public void clicou(MouseEvent event){
         mainmenu.getStyleClass().add("fundoBotao");
@@ -77,8 +91,10 @@ public class JanelaPreJogo extends Jogo{
         jogar.setOnMouseClicked((evt)->clicou(evt));
 
 
-        Main.mudaCena("menu");
+       // Main.mudaCena("menu");
     }
+
+
 
     @FXML
     public void jogo(ActionEvent e){
@@ -86,57 +102,68 @@ public class JanelaPreJogo extends Jogo{
         pecaPlayer1();
         pecaPlayer2();
 
-        Main.mudaCena("jogo");
+        Main.mudaCena(Main.JANELAJOGO, (aClass) -> new JanelaJogo(jogo));
     }
 
     public static int opcaoP1;
     public static int opcaoP2;
 
     public void pecaPlayer1(){
+
+        int opcao =0;
+
+
+
         if(redP1.isSelected()){
-            opcaoP1 = 1;
+            opcao = 0;
         }
 
         if(greenP1.isSelected()){
-            opcaoP1 = 2;
+            opcao = 1;
         }
 
         if(yellowP1.isSelected()){
-            opcaoP1 = 3;
+            opcao = 2;
         }
 
 
         if(purpleP1.isSelected()){
-            opcaoP1 = 4;
+            opcao = 3;
         }
 
         if(grayP1.isSelected()){
-            opcaoP1 = 5;
+            opcao = 4;
         }
+
+        jogador1.setCor(cores[opcao]);
 
     }
 
     public void pecaPlayer2(){
 
+        int opcao =0;
+
         if(redP2.isSelected()){
-            opcaoP2 = 1;
+            opcao = 0;
         }
 
         if(greenP2.isSelected()){
-            opcaoP2 = 2;
+            opcao = 1;
         }
 
         if(yellowP2.isSelected()){
-            opcaoP2 = 3;
+            opcao = 2;
         }
 
 
         if(purpleP2.isSelected()){
-            opcaoP2 = 4;
+            opcao = 3;
         }
 
         if(grayP2.isSelected()){
-            opcaoP2 = 5;
+            opcao = 4;
         }
+
+        jogador2.setCor(cores[opcao]);
     }
 }

@@ -7,14 +7,14 @@ public class JanelaVencedor{
     protected void menu(ActionEvent e){
 
         System.out.println("AAAAAAAA FAFA");
-        Main.mudaCena("menu");
+        //Main.mudaCena("menu");
     }
 
 
 
     @FXML
     protected void jogo(ActionEvent e){
-        Main.mudaCena("jogo");
+        //Main.mudaCena("jogo");
         System.out.println("AAAAAAAA FAFA");
     }
 }
