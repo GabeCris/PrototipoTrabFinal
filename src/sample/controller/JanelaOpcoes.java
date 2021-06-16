@@ -1,19 +1,19 @@
+package sample.controller;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.RadioButton;
-import javafx.scene.control.TextField;
-import javafx.scene.control.ToggleGroup;
+import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
+import sample.Main;
+import sample.model.Jogador;
+import sample.model.Jogo;
 
-public class JanelaPreJogo{
+
+public class JanelaOpcoes {
 
     @FXML
     public RadioButton redP1;
-
-    @FXML
-    public RadioButton blueP1;
 
     @FXML
     public RadioButton greenP1;
@@ -28,13 +28,7 @@ public class JanelaPreJogo{
     public RadioButton grayP1;
 
     @FXML
-    public RadioButton orangeP1;
-
-    @FXML
     public RadioButton redP2;
-
-    @FXML
-    public RadioButton blueP2;
 
     @FXML
     public RadioButton greenP2;
@@ -48,17 +42,15 @@ public class JanelaPreJogo{
     @FXML
     public RadioButton grayP2;
 
-    @FXML
-    public RadioButton orangeP2;
 
     @FXML
     public ToggleGroup pecaP1;
 
     @FXML
-    public TextField nomeP1;
+    public TextArea nomeP1;
 
     @FXML
-    public TextField nomeP2;
+    public TextArea nomeP2;
 
     @FXML
     public Button jogar;
@@ -66,14 +58,18 @@ public class JanelaPreJogo{
     @FXML
     public Button mainmenu;
 
-    private Color[] cores = {Color.RED, Color.GRAY, Color.YELLOW, Color.BLUE, Color.PURPLE};
+    private String nomePLayer1;
+    private String nomePLayer2;
+
+    private Color[] cores = {Color.RED, Color.GREEN, Color.YELLOW, Color.PURPLE, Color.GRAY};
 
     private Jogador jogador1;
     private Jogador jogador2;
+    private JanelaJogo janelaJogo;
 
-    private Jogo jogo;
+    public Jogo jogo;
 
-    public JanelaPreJogo(){
+    public JanelaOpcoes(){
         this.jogador1 = new Jogador();
         this.jogador2 = new Jogador();
         this.jogo = new Jogo(jogador1, jogador2);
@@ -82,36 +78,32 @@ public class JanelaPreJogo{
 
     public void clicou(MouseEvent event){
         mainmenu.getStyleClass().add("fundoBotao");
-
         jogar.getStyleClass().add("fundoBotao");
     }
 
     @FXML
     protected void menu(ActionEvent e){
         jogar.setOnMouseClicked((evt)->clicou(evt));
-
-
-       // Main.mudaCena("menu");
+        Main.mudaCena(Main.MENU, (aClass) -> new JanelaMain());
     }
-
 
 
     @FXML
     public void jogo(ActionEvent e){
-
         pecaPlayer1();
         pecaPlayer2();
-
         Main.mudaCena(Main.JANELAJOGO, (aClass) -> new JanelaJogo(jogo));
     }
 
-    public static int opcaoP1;
-    public static int opcaoP2;
-
     public void pecaPlayer1(){
+
 
         int opcao =0;
 
+        nomePLayer1 = nomeP1.getText();
+
+
+       // System.out.println("Nome P1 "+nomePLayer1);
 
 
         if(redP1.isSelected()){
@@ -136,12 +128,17 @@ public class JanelaPreJogo{
         }
 
         jogador1.setCor(cores[opcao]);
+        jogador1.setNome(nomePLayer1);
+
 
     }
 
     public void pecaPlayer2(){
 
         int opcao =0;
+
+        nomePLayer2 = nomeP2.getText();
+        //System.out.println("Nome P2 "+nomePLayer2);
 
         if(redP2.isSelected()){
             opcao = 0;
@@ -165,5 +162,6 @@ public class JanelaPreJogo{
         }
 
         jogador2.setCor(cores[opcao]);
+        jogador2.setNome(nomePLayer2);
     }
 }

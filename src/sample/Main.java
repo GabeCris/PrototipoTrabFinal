@@ -1,3 +1,5 @@
+package sample;
+
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -6,19 +8,21 @@ import javafx.scene.layout.Region;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 import javafx.util.Callback;
+import sample.controller.JanelaMain;
 
 
 public class Main extends Application {
 
 
     public static void main(String[] args) {
+
         launch(args);
     }
 
-    public static final String MENU = "/fxml/janelinhaMain.fxml";
-    public static final String JANELAJOGO = "/fxml/janelinhaJogo.fxml";
-    public static final String JANELAPREJOGO = "/fxml/janelinhaPreJogo.fxml";
-    public static final String JANELAVENCEDOR = "/fxml/janelinhaVencedor.fxml";
+    public static final String MENU = "fxml/janelinhaMain.fxml";
+    public static final String JANELAJOGO = "fxml/janelinhaJogo.fxml";
+    public static final String JANELAOPCOES = "fxml/janelinhaOpcoes.fxml";
+    public static final String JANELAVENCEDOR = "fxml/janelinhaVencedor.fxml";
 
 
     private static StackPane base;
@@ -52,7 +56,7 @@ public class Main extends Application {
 
 
         stage.setScene(new Scene(base, Region.USE_PREF_SIZE, Region.USE_PREF_SIZE));
-        stage.setTitle("Simulador de Subway...");
+        stage.setTitle("CONNECT");
 
         mudaCena(MENU, (aClass)->new JanelaMain());
 

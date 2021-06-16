@@ -1,5 +1,8 @@
+package sample.model;
+
 import javafx.scene.control.Alert;
 import javafx.scene.paint.Color;
+import sample.controller.JanelaJogo;
 
 
 public class Jogo extends Exception{
@@ -11,10 +14,10 @@ public class Jogo extends Exception{
 
     private Jogador jogador1;
     private Jogador jogador2;
+    private JanelaJogo janelaJogo;
 
-
-    public int p1;
-    public int p2;
+    public int p1 = 0;
+    public int p2 = 0;
 
     public Jogo(Jogador jogador1, Jogador jogador2){
         matriz = new int[N_COLS][N_LIN];
@@ -22,6 +25,11 @@ public class Jogo extends Exception{
         this.jogador1 = jogador1;
         this.jogador2 = jogador2;
     }
+
+    public Jogo(JanelaJogo janelaJogo){
+        this.janelaJogo = janelaJogo;
+    }
+
 
     public Jogador jogadorDaVez(){
         if(vez % 2 ==0){
@@ -36,11 +44,9 @@ public class Jogo extends Exception{
         if(matriz[i][j] == 1){
             return jogador1.getCor();
         }
-
         else if(matriz[i][j] == 2){
             return jogador2.getCor();
         }
-
         return Color.WHITE;
     }
 
@@ -64,7 +70,6 @@ public class Jogo extends Exception{
         else{
             matriz[i][j] = 2;
         }
-
         verificaGanhador();
         vez++;
 
@@ -90,8 +95,6 @@ public class Jogo extends Exception{
                         matriz[i][j+3] == player){
                     System.out.println("GANHOU");
                     placar();
-
-                    JanelaJogo.janelaVencedor();
                 }
             }
         }
@@ -104,7 +107,6 @@ public class Jogo extends Exception{
                         matriz[i+3][j] == player){
                     System.out.println("GANHOU");
                     placar();
-                    JanelaJogo.janelaVencedor();
                 }
             }
         }
@@ -117,7 +119,6 @@ public class Jogo extends Exception{
                         matriz[i-3][j+3] == player){
                     System.out.println("GANHOU");
                     placar();
-                    JanelaJogo.janelaVencedor();
                 }
             }
         }
@@ -130,14 +131,13 @@ public class Jogo extends Exception{
                         matriz[i+3][j+3] == player){
                     System.out.println("GANHOU");
                     placar();
-                    JanelaJogo.janelaVencedor();
                 }
             }
         }
 
     }
 
-    public int[] placar(){
+    public void placar(){
         System.out.println("ENTROU NO PLACAR");
         if(vez %2 == 0){
             p1++;
@@ -147,22 +147,11 @@ public class Jogo extends Exception{
             p2++;
         }
 
-
         System.out.println("PLACAR PLAYER 1: "+p1);
         System.out.println("PLACAR PLAYER 2: "+p2);
-
-        int placares[];
-        placares = new int[2];
-
-        placares[0] = p1;
-
-        placares[1] = p2;
-
-        System.out.println(placares[0]);
-
-        System.out.println(placares[1]);
-
-        return placares;
+        //janelaJogo.placar();
+        nomeVencedor();
+        janelaJogo.janelaVencedor();
     }
 
 
@@ -181,6 +170,7 @@ public class Jogo extends Exception{
     }
 
     public boolean estaVazia(int i, int j){
+
         return matriz[i][j] != 1 && matriz[i][j] != 2;
     }
 
@@ -188,16 +178,36 @@ public class Jogo extends Exception{
         if(j == Jogo.N_LIN -1 || matriz[i][j+1] ==  1 || matriz[i][j+1] == 2) {
             jogadorDaVez(i, j);
             return true;
-
         }
 
         return false;
+    }
+
+    public String nomeVencedor(){
+         String vencedor = null;
+
+        if(player == 1){
+           vencedor = jogador1.getNome();
+        }
+
+        else if(player == 2){
+           vencedor =  jogador2.getNome();
+        }
+
+        System.out.println(vencedor);
+        System.out.println("Era pra mostrar o vencedor em cima");
+
+        return vencedor;
     }
 
     public int getValor(int i, int j){
         return matriz[i][j];
     }
 
+
+    public int teste(){
+        return 2;
+    }
 
 
 }

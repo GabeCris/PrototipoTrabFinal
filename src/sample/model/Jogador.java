@@ -1,3 +1,5 @@
+package sample.model;
+
 import javafx.scene.paint.Color;
 
 public class Jogador {
@@ -18,8 +20,14 @@ public class Jogador {
         return nome;
     }
 
+    public void setNome(String nome){
+        this.nome = nome;
+        System.out.println("Nome do jogador "+nome);
+    }
+
     public void setCor(Color cor){
         this.cor = cor;
+        //System.out.println("Qual cor do jogador"+cor);
     }
 
     public Color getCor() {

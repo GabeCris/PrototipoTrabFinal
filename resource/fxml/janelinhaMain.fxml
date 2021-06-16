@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="fundo" prefHeight="600.0" prefWidth="550.0" stylesheets="@/css/interface.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="JanelaMain">
+<AnchorPane fx:id="fundo" prefHeight="600.0" prefWidth="550.0" stylesheets="@/css/interface.css" xmlns="http://javafx.com/javafx/" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.JanelaMain">
    <children>
       <Button layoutX="130.0" layoutY="315.0" mnemonicParsing="false" onAction="#click" prefHeight="71.0" prefWidth="291.0" style="-fx-border-radius: 150; -fx-border-width: 4; -fx-border-color: white; -fx-background-radius: 150; -fx-background-color: blue;" text="JOGAR" textAlignment="CENTER" textFill="WHITE" wrapText="true">
          <font>
