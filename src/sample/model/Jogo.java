@@ -60,7 +60,7 @@ public class Jogo extends Exception{
         }
     }
 
-    public void jogadorDaVez(int i, int j){
+    public int jogadorDaVez(int i, int j){
         if(vez%2==0){
             matriz[i][j] = 1;
         }
@@ -70,7 +70,7 @@ public class Jogo extends Exception{
         }
         verificaGanhador();
         vez++;
-
+        return vez;
     }
 
     public static int player =0;

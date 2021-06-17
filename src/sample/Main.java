@@ -26,6 +26,7 @@ public class Main extends Application {
     public static final String JANELAVENCEDOR = "/fxml/janelinhaVencedor.fxml";
     public static final String JANELALOGIN = "/fxml/janelinhaLogin.fxml";
     public static final String JANELACADASTRO = "/fxml/janelinhaCadastro.fxml";
+    public static final String JANELATUTORIAL = "/fxml/janelinhaTutorial.fxml";
 
 
     private static StackPane base;

@@ -60,7 +60,10 @@ public class JanelaJogo{
                 panes[i][j].setOnMouseClicked((evt)->clicou(evt));
                 root.add(panes[i][j], i,j);
                // panes[i][j].getStyleClass().add("branco");
-               panes[i][j].getStyleClass().add("redondo");
+                if(jogo.estaVazia(i,j)){
+                    panes[i][j].getStyleClass().add("redondo");
+                }
+
 
             }
         }

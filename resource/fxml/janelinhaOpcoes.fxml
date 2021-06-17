@@ -2,7 +2,6 @@
 
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -67,7 +66,11 @@
             <Font name="Arial Black" size="12.0" />
          </font>
       </Button>
-      <Label alignment="TOP_CENTER" layoutX="114.0" layoutY="91.0" prefHeight="85.0" prefWidth="317.0" styleClass="titulos" stylesheets="@../css/interface.css" text="PEÇAS" />
       <Line endX="298.0" layoutX="158.0" layoutY="176.0" startX="-63.0" stroke="WHITE" strokeWidth="4.0" />
+      <Text fill="WHITE" layoutX="94.0" layoutY="157.0" stroke="BLACK" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="0.0" text="OPCOES" textAlignment="CENTER" wrappingWidth="377.98193359375">
+         <font>
+            <Font name="Aharoni Bold" size="70.0" />
+         </font>
+      </Text>
    </children>
 </AnchorPane>

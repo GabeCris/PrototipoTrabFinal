@@ -12,14 +12,17 @@
 
 .redondo:hover{
     -fx-cursor: hand;
-    -fx-background-color: rgb(193, 193, 193);
-    -fx-background-radius: 150;
-
+    -fx-border-radius: 150;
+    -fx-border-color: #121c86;
+    -fx-border-width: 7;
 }
 
 
 .clicado:hover{
-    -fx-cursor:text;
+    -fx-cursor: closed_hand;
+    -fx-border-radius: 150;
+    -fx-border-color: #fdfdfd;
+    -fx-border-width: 7;
 }
 
 .botao{
@@ -47,7 +50,11 @@
     -fx-font-size: 25;
     -fx-font-family: "Arial Black";
     -fx-font-weight: bold;
+}
 
+.botaomenu:hover{
+    -fx-background-color: #2023d7;
+    -fx-font-size: 22;
 }
 
 .textFields{
@@ -62,10 +69,24 @@
     -fx-font-family: "Arial Black";
     -fx-font-weight: bold;
     -fx-focus-traversable: false;
+
+}
+
+
+.logojogo{
+    -fx-font-size: 130;
+    -fx-font-family: "Arial Black";
+}
+
+.logojogofundo{
+    -fx-font-size: 75;
+    -fx-font-family: "Arial Black";
+    -fx-text-fill: #2023d7;
 }
 
 .botao:hover{
     -fx-background-color: #2023d7;
+    -fx-font-size: 15;
 }
 
 

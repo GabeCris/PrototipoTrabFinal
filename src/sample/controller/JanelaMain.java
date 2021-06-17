@@ -12,4 +12,16 @@ public class JanelaMain {
        Main.mudaCena(Main.JANELAOPCOES, (aClass)-> new JanelaOpcoes());
 
     }
+
+    @FXML
+    protected void tutorial(ActionEvent e){
+        Main.mudaCena(Main.JANELATUTORIAL, (aClass)-> new JanelaTutorial());
+    }
+
+    @FXML
+    protected void deslogar(ActionEvent e){
+        Main.mudaCena(Main.JANELALOGIN, (aClass)-> new JanelaLogin());
+
+    }
+
 }
