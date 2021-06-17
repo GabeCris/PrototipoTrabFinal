@@ -46,26 +46,12 @@ public class JanelaOpcoes {
     @FXML
     public ToggleGroup pecaP1;
 
-    @FXML
-    public TextArea nomeP1;
-
-    @FXML
-    public TextArea nomeP2;
-
-    @FXML
-    public Button jogar;
-
-    @FXML
-    public Button mainmenu;
-
-    private String nomePLayer1;
-    private String nomePLayer2;
 
     private Color[] cores = {Color.RED, Color.GREEN, Color.YELLOW, Color.PURPLE, Color.GRAY};
 
     private Jogador jogador1;
     private Jogador jogador2;
-    private JanelaJogo janelaJogo;
+    //private JanelaJogo janelaJogo;
 
     public Jogo jogo;
 
@@ -76,14 +62,8 @@ public class JanelaOpcoes {
 
     }
 
-    public void clicou(MouseEvent event){
-        mainmenu.getStyleClass().add("fundoBotao");
-        jogar.getStyleClass().add("fundoBotao");
-    }
-
     @FXML
     protected void menu(ActionEvent e){
-        jogar.setOnMouseClicked((evt)->clicou(evt));
         Main.mudaCena(Main.MENU, (aClass) -> new JanelaMain());
     }
 
@@ -100,7 +80,7 @@ public class JanelaOpcoes {
 
         int opcao =0;
 
-        nomePLayer1 = nomeP1.getText();
+        //nomePLayer1 = nomeP1.getText();
 
 
        // System.out.println("Nome P1 "+nomePLayer1);
@@ -128,7 +108,7 @@ public class JanelaOpcoes {
         }
 
         jogador1.setCor(cores[opcao]);
-        jogador1.setNome(nomePLayer1);
+        //jogador1.setNome(nomePLayer1);
 
 
     }
@@ -137,7 +117,7 @@ public class JanelaOpcoes {
 
         int opcao =0;
 
-        nomePLayer2 = nomeP2.getText();
+       // nomePLayer2 = nomeP2.getText();
         //System.out.println("Nome P2 "+nomePLayer2);
 
         if(redP2.isSelected()){
@@ -162,6 +142,6 @@ public class JanelaOpcoes {
         }
 
         jogador2.setCor(cores[opcao]);
-        jogador2.setNome(nomePLayer2);
+       // jogador2.setNome(nomePLayer2);
     }
 }

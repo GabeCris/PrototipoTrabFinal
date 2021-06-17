@@ -5,18 +5,17 @@ import javafx.fxml.FXML;
 
 import static sample.Main.*;
 
-public class JanelaLogin {
+public class JanelaCadastro {
 
     @FXML
-    protected void entrar(ActionEvent e){
-        mudaCena(MENU, (aClass)-> new JanelaMain());
+    protected void cancelar(ActionEvent e){
+        mudaCena(JANELALOGIN, (aClass)-> new JanelaLogin());
     }
 
     @FXML
     protected void cadastrar(ActionEvent e){
-        mudaCena(JANELACADASTRO, (aClass)-> new JanelaCadastro());
+        mudaCena(MENU, (aClass)-> new JanelaMain());
     }
-
 
 
 }

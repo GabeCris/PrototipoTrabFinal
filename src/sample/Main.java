@@ -8,6 +8,7 @@ import javafx.scene.layout.Region;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 import javafx.util.Callback;
+import sample.controller.JanelaLogin;
 import sample.controller.JanelaMain;
 
 
@@ -19,10 +20,12 @@ public class Main extends Application {
         launch(args);
     }
 
-    public static final String MENU = "fxml/janelinhaMain.fxml";
-    public static final String JANELAJOGO = "fxml/janelinhaJogo.fxml";
-    public static final String JANELAOPCOES = "fxml/janelinhaOpcoes.fxml";
-    public static final String JANELAVENCEDOR = "fxml/janelinhaVencedor.fxml";
+    public static final String MENU = "/fxml/janelinhaMain.fxml";
+    public static final String JANELAJOGO = "/fxml/janelinhaJogo.fxml";
+    public static final String JANELAOPCOES = "/fxml/janelinhaOpcoes.fxml";
+    public static final String JANELAVENCEDOR = "/fxml/janelinhaVencedor.fxml";
+    public static final String JANELALOGIN = "/fxml/janelinhaLogin.fxml";
+    public static final String JANELACADASTRO = "/fxml/janelinhaCadastro.fxml";
 
 
     private static StackPane base;
@@ -58,7 +61,8 @@ public class Main extends Application {
         stage.setScene(new Scene(base, Region.USE_PREF_SIZE, Region.USE_PREF_SIZE));
         stage.setTitle("CONNECT");
 
-        mudaCena(MENU, (aClass)->new JanelaMain());
+        //mudaCena(MENU, (aClass)->new JanelaMain());
+        mudaCena(JANELALOGIN, (aClass)-> new JanelaLogin());
 
         //stage.setResizable(false);
         //stage.initStyle(StageStyle.UNDECORATED);

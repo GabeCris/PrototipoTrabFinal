@@ -4,38 +4,39 @@
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
-<Pane prefHeight="600.0" prefWidth="550.0" style="-fx-background-color: blue;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.JanelaLogin">
+<Pane prefHeight="600.0" prefWidth="550.0" style="-fx-background-color: #121c86;" xmlns="http://javafx.com/javafx/" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.JanelaLogin">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="557.0" layoutX="27.0" layoutY="22.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="5.0" width="496.0" />
-      <TextField alignment="CENTER" layoutX="96.0" layoutY="210.0" prefHeight="41.0" prefWidth="358.0" promptText="USUÁRIO" style="-fx-background-color: blue; -fx-border-width: 4; -fx-border-color: white; -fx-border-radius: 50;">
+      <TextField alignment="CENTER" layoutX="96.0" layoutY="223.0" prefHeight="41.0" prefWidth="358.0" promptText="USUÁRIO" style="-fx-background-color: #121c86; -fx-border-width: 4; -fx-border-color: white; -fx-border-radius: 50;" styleClass="textFields" stylesheets="@../css/interface.css">
          <font>
             <Font size="21.0" />
          </font>
       </TextField>
-      <Text fill="WHITE" layoutX="86.0" layoutY="158.0" stroke="BLACK" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="0.0" text="LOGIN" textAlignment="CENTER" wrappingWidth="377.98193359375">
+      <Text fill="WHITE" layoutX="84.0" layoutY="150.0" stroke="BLACK" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="0.0" text="LOGIN" textAlignment="CENTER" wrappingWidth="377.98193359375">
          <font>
             <Font name="Arial Black" size="57.0" />
          </font>
       </Text>
-      <PasswordField alignment="CENTER" layoutX="96.0" layoutY="288.0" prefHeight="41.0" prefWidth="358.0" promptText="SENHA" style="-fx-background-color: blue; -fx-border-color: white; -fx-border-width: 4; -fx-border-radius: 50;">
+      <PasswordField alignment="CENTER" layoutX="96.0" layoutY="288.0" prefHeight="41.0" prefWidth="358.0" promptText="SENHA" style="-fx-background-color: #121c86; -fx-border-color: white; -fx-border-width: 4; -fx-border-radius: 50;" styleClass="textFields" stylesheets="@../css/interface.css">
          <font>
             <Font size="21.0" />
          </font>
       </PasswordField>
-      <Button layoutX="197.0" layoutY="403.0" mnemonicParsing="false" onAction="#click" prefHeight="68.0" prefWidth="155.0" style="-fx-border-radius: 150; -fx-border-width: 4; -fx-border-color: white; -fx-background-radius: 150; -fx-background-color: blue;" text="ENTRAR" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+      <Button layoutX="197.0" layoutY="391.0" mnemonicParsing="false" onAction="#entrar" prefHeight="68.0" prefWidth="155.0" styleClass="botao" stylesheets="@../css/interface.css" text="ENTRAR" textAlignment="CENTER" textFill="WHITE" wrapText="true">
          <font>
             <Font name="Arial Black" size="22.0" />
          </font>
       </Button>
-      <Button layoutX="132.0" layoutY="358.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="286.0" style="-fx-background-color: blue;" text="NÃO POSSUI LOGIN? CLIQUE AQUI" textAlignment="CENTER" textFill="WHITE">
+      <Button layoutX="109.0" layoutY="343.0" mnemonicParsing="false" onAction="#cadastrar" prefHeight="32.0" prefWidth="332.0" styleClass="botaotexto" stylesheets="@../css/interface.css" text="NÃO POSSUI LOGIN? CLIQUE AQUI" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Button>
+      <Line endX="298.0" layoutX="167.0" layoutY="170.0" startX="-63.0" stroke="WHITE" strokeWidth="4.0" />
    </children>
 </Pane>

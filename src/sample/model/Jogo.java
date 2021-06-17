@@ -50,9 +50,7 @@ public class Jogo extends Exception{
         return Color.WHITE;
     }
 
-
-
-    public static void inicializaMatriz() {
+    public void inicializaMatriz() {
 
 
         for (int i = 0; i < N_COLS; i++) {
@@ -150,8 +148,10 @@ public class Jogo extends Exception{
         System.out.println("PLACAR PLAYER 1: "+p1);
         System.out.println("PLACAR PLAYER 2: "+p2);
         //janelaJogo.placar();
-        nomeVencedor();
-        janelaJogo.janelaVencedor();
+        //nomeVencedor();
+        //janelaJogo.janelaVencedor();
+        inicializaMatriz();
+        JanelaJogo.janelaVencedor();
     }
 
 
@@ -183,7 +183,7 @@ public class Jogo extends Exception{
         return false;
     }
 
-    public String nomeVencedor(){
+    /*public String nomeVencedor(){
          String vencedor = null;
 
         if(player == 1){
@@ -199,15 +199,8 @@ public class Jogo extends Exception{
 
         return vencedor;
     }
-
+*/
     public int getValor(int i, int j){
         return matriz[i][j];
     }
-
-
-    public int teste(){
-        return 2;
-    }
-
-
 }

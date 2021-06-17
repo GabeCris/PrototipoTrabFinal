@@ -2,38 +2,38 @@ package sample.controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text;
 import sample.Main;
+import sample.model.Jogador;
 import sample.model.Jogo;
+
+import java.awt.*;
 
 
 public class JanelaVencedor{
 
     @FXML
-    private Text txtVencedor;
+    private Rectangle rtg;
 
     private Jogo jogo;
+    private JanelaJogo janelaJogo;
+
     public JanelaVencedor(Jogo jogo) {
         this.jogo = jogo;
-       // mudaVencedor();
+        //mudaRTG();
+    }
+
+    public JanelaVencedor(JanelaJogo janelaJogo){
+
     }
 
 
 
-    private void mudaVencedor(){
+    private void mudaRTG(){
+        rtg.setFill(janelaJogo.rtg.getFill());
 
-        System.out.println("BBBBBBBBBB"+jogo.teste());
-        System.out.println("MOSTROU O VENCEDOR");
-        try {
-            String nome;
-
-            nome = jogo.nomeVencedor();
-            System.out.println("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"+nome);
-            //txtVencedor.setText(jogo.vencedor);
-        }
-        catch (NullPointerException e){
-            System.out.println("DEU ERRO AQUI");
-        }
     }
 
 
@@ -49,6 +49,5 @@ public class JanelaVencedor{
     @FXML
     private void game(ActionEvent e){
         Main.mudaCena(Main.JANELAJOGO, (aClass) -> new JanelaJogo(jogo));
-        System.out.println("AAAAAAAA FAFA");
     }
 }

@@ -1,61 +1,99 @@
 
 #root{
-    -fx-padding: 10;
-    -fx-background-color: blue;
+    -fx-padding: 5;
+    -fx-background-color: #121c86;
 }
 
-#fundo{
-    -fx-background-color: blue;
+.fundo{
+    -fx-background-color:  #121c86;
 }
 
 
 
-.redondo{
-    -fx-border-radius: 50;
-    -fx-background-radius: 50;
+.redondo:hover{
     -fx-cursor: hand;
-    -fx-border-width: 3;
-    -fx-border-color: black;
-}
-
-.vermelho{
-    -fx-background-color: red;
-}
-
-.branco{
-    -fx-background-color: white;
+    -fx-background-color: rgb(193, 193, 193);
+    -fx-background-radius: 150;
 
 }
 
-.amarelo{
-    -fx-background-color: yellow;
+
+.clicado:hover{
+    -fx-cursor:text;
 }
 
-.azul{
-    -fx-background-color: blue;
+.botao{
+    -fx-border-radius: 150;
+    -fx-border-width: 4;
+    -fx-border-color: white;
+    -fx-background-radius: 150;
+    -fx-background-color: #121c86;
+    -fx-cursor: hand;
+    -fx-text-fill: white;
+    -fx-font-size: 18;
+    -fx-font-family: "Arial Black";
+    -fx-font-weight: bold;
+
 }
 
-.verde{
-    -fx-background-color: green;
+.botaomenu{
+    -fx-border-radius: 150;
+    -fx-border-width: 4;
+    -fx-border-color: white;
+    -fx-background-radius: 150;
+    -fx-background-color: #121c86;
+    -fx-cursor: hand;
+    -fx-text-fill: white;
+    -fx-font-size: 25;
+    -fx-font-family: "Arial Black";
+    -fx-font-weight: bold;
+
 }
 
-.roxo{
-    -fx-background-color: purple;
+.textFields{
+    -fx-border-radius: 150;
+    -fx-border-width: 4;
+    -fx-border-color: white;
+    -fx-background-radius: 150;
+    -fx-background-color:  #121c86;
+    -fx-cursor: text;
+    -fx-text-fill: white;
+    -fx-font-size: 15;
+    -fx-font-family: "Arial Black";
+    -fx-font-weight: bold;
+    -fx-focus-traversable: false;
 }
 
-.cinza{
-    -fx-background-color: gray;
+.botao:hover{
+    -fx-background-color: #2023d7;
 }
 
-.laranja{
-    -fx-background-color: orange;
+
+.titulos{
+    -fx-text-fill: white;
+    -fx-font-size: 57;
+    -fx-font-family: "Arial Black";
+    -fx-font-weight: bold;
 }
 
-.clicado{
-    -fx-cursor:grabbing;
+.botaotexto{
+    -fx-background-color:  #121c86;
+    -fx-cursor: hand;
+    -fx-text-fill: white;
+    -fx-font-size: 14;
+    -fx-font-family: "Arial Black";
+    -fx-font-weight: bold;
 }
 
-.fundoBotao{
-    -fx-background-color: white;
+.botaotexto:hover{
+    -fx-text-fill: #686adc;
+}
+
+.fundologo{
+    -fx-background-image: url(/image/LOGO.png);
+}
+
+.rb:hover{
+    -fx-cursor: hand;
 }
 

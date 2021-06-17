@@ -8,7 +8,7 @@ import sample.Main;
 public class JanelaMain {
 
     @FXML
-    protected void click(ActionEvent e){
+    protected void game(ActionEvent e){
        Main.mudaCena(Main.JANELAOPCOES, (aClass)-> new JanelaOpcoes());
 
     }
