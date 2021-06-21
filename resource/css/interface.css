@@ -110,11 +110,58 @@
     -fx-text-fill: #686adc;
 }
 
-.fundologo{
-    -fx-background-image: url(/image/LOGO.png);
-}
-
+.
 .rb:hover{
     -fx-cursor: hand;
 }
 
+.alerta{
+    -fx-background-color: #2023d7;
+}
+
+.alerta:header *.header-panel{
+    -fx-background-color: #121c86;
+
+}
+
+.alerta> *.content.label{
+    -fx-text-fill: white;
+    -fx-font-size: 20;
+    -fx-font-family: "Arial Black";
+    -fx-font-weight: bold;
+}
+
+.alerta:header *.header-panel *.label{
+    -fx-text-fill: white;
+    -fx-font-size: 20;
+    -fx-font-family: "Arial Black";
+    -fx-font-weight: bold;
+}
+
+.alerta> *.button-bar *.button{
+    -fx-pref-height: 5;
+    -fx-border-radius: 150;
+    -fx-border-width: 2;
+    -fx-border-color: white;
+    -fx-background-radius: 150;
+    -fx-background-color: #121c86;
+    -fx-cursor: hand;
+    -fx-text-fill: white;
+    -fx-font-size: 10;
+    -fx-font-family: "Arial Black";
+    -fx-font-weight: bold;
+}
+
+.alerta:hover> *.button-bar *.button{
+    -fx-border-radius: 150;
+    -fx-border-width: 2;
+    -fx-border-color: white;
+    -fx-background-radius: 150;
+    -fx-background-color: #2023d7;
+    -fx-cursor: hand;
+    -fx-text-fill: white;
+    -fx-font-size: 8;
+    -fx-font-family: "Arial Black";
+    -fx-font-weight: bold;
+
+}

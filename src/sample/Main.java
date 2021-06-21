@@ -8,6 +8,7 @@ import javafx.scene.layout.Region;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 import javafx.util.Callback;
+import sample.controller.JanelaCadastro;
 import sample.controller.JanelaLogin;
 import sample.controller.JanelaMain;
 
@@ -64,8 +65,9 @@ public class Main extends Application {
 
         //mudaCena(MENU, (aClass)->new JanelaMain());
         mudaCena(JANELALOGIN, (aClass)-> new JanelaLogin());
+        //mudaCena(JANELACADASTRO, (aClass)-> new JanelaCadastro());
 
-        //stage.setResizable(false);
+        stage.setResizable(false);
         //stage.initStyle(StageStyle.UNDECORATED);
         stage.show();
 

@@ -16,7 +16,7 @@
          <cursor>
             <Cursor fx:constant="DEFAULT" />
          </cursor></Rectangle>
-        <TextField alignment="CENTER" focusTraversable="false" layoutX="96.0" layoutY="221.0" prefHeight="41.0" prefWidth="358.0" promptText="INFORME NOME DE USUARIO" styleClass="textFields" stylesheets="@../css/interface.css">
+        <TextField  fx:id="tfNome" alignment="CENTER" focusTraversable="false" layoutX="96.0" layoutY="221.0" prefHeight="41.0" prefWidth="358.0" promptText="INFORME NOME DE USUARIO" styleClass="textFields" stylesheets="@../css/interface.css">
             <font>
                 <Font size="15.0" />
             </font>
@@ -29,7 +29,7 @@
                 <Font name="Aharoni Bold" size="65.0" />
             </font>
         </Text>
-        <PasswordField alignment="CENTER" focusTraversable="false" layoutX="96.0" layoutY="280.0" prefHeight="41.0" prefWidth="358.0" promptText="INFORME A SENHA" styleClass="textFields" stylesheets="@../css/interface.css">
+        <PasswordField fx:id="pfUM" alignment="CENTER" focusTraversable="false" layoutX="96.0" layoutY="280.0" prefHeight="41.0" prefWidth="358.0" promptText="INFORME A SENHA" styleClass="textFields" stylesheets="@../css/interface.css">
             <font>
                 <Font size="14.0" />
             </font>
@@ -45,7 +45,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
         </Button>
-      <PasswordField alignment="CENTER" focusTraversable="false" layoutX="96.0" layoutY="337.0" prefHeight="41.0" prefWidth="358.0" promptText="INFORME A SENHA NOVAMENTE" styleClass="textFields">
+      <PasswordField fx:id="pfDOIS" alignment="CENTER" focusTraversable="false" layoutX="96.0" layoutY="337.0" prefHeight="41.0" prefWidth="358.0" promptText="INFORME A SENHA NOVAMENTE" styleClass="textFields">
          <font>
             <Font size="14.0" />
          </font>

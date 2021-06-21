@@ -42,9 +42,13 @@ public class JanelaOpcoes {
     @FXML
     public RadioButton grayP2;
 
-
     @FXML
     public ToggleGroup pecaP1;
+
+    private DialogPane dialog;
+
+    Alert alert = new Alert(Alert.AlertType.INFORMATION);
+
 
 
     private Color[] cores = {Color.RED, Color.GREEN, Color.YELLOW, Color.PURPLE, Color.GRAY};
@@ -62,6 +66,10 @@ public class JanelaOpcoes {
 
     }
 
+    public void initialize(){
+        dialogSet();
+    }
+
     @FXML
     protected void menu(ActionEvent e){
         Main.mudaCena(Main.MENU, (aClass) -> new JanelaMain());
@@ -72,7 +80,21 @@ public class JanelaOpcoes {
     public void jogo(ActionEvent e){
         pecaPlayer1();
         pecaPlayer2();
-        Main.mudaCena(Main.JANELAJOGO, (aClass) -> new JanelaJogo(jogo));
+        verificaPecas();
+    }
+
+    public void verificaPecas(){
+        if(jogador1.getCor() == jogador2.getCor()){
+            alert.setTitle("ERROR");
+            alert.setHeaderText("Jogada Inválida!");
+            alert.setContentText("Selecionem peças diferentes!");
+
+            alert.showAndWait();
+        }
+
+        else{
+            Main.mudaCena(Main.JANELAJOGO, (aClass) -> new JanelaJogo(jogo));
+        }
     }
 
     public void pecaPlayer1(){
@@ -143,5 +165,12 @@ public class JanelaOpcoes {
 
         jogador2.setCor(cores[opcao]);
        // jogador2.setNome(nomePLayer2);
+    }
+
+    private void dialogSet(){
+        alert.setTitle("ERROR");
+        dialog = alert.getDialogPane();
+        dialog.getStylesheets().add(getClass().getResource("/css/interface.css").toString());
+        dialog.getStyleClass().add("alerta");
     }
 }
