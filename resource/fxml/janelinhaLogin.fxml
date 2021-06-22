@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.Pane?>
@@ -38,5 +39,15 @@
          </font>
       </Button>
       <Line endX="298.0" layoutX="167.0" layoutY="170.0" startX="-63.0" stroke="WHITE" strokeWidth="4.0" />
+      <Label alignment="CENTER" layoutX="196.0" layoutY="561.0" prefHeight="27.0" prefWidth="139.0" style="-fx-background-color: #121c86;" text="      GabeCris" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Aharoni Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="209.0" layoutY="560.0" prefHeight="32.0" prefWidth="30.0" text="©" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Aharoni Bold" size="27.0" />
+         </font>
+      </Label>
    </children>
 </Pane>

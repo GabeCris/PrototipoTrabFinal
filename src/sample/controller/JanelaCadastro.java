@@ -1,12 +1,10 @@
 package sample.controller;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.DialogPane;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import sample.model.BancoDados;
 import sample.model.Pessoa;
 import sample.model.daos.JDBCPessoaDao;
 import sample.model.daos.PessoaDao;
@@ -36,8 +34,8 @@ public class JanelaCadastro {
 
     Alert alert = new Alert(Alert.AlertType.INFORMATION);
 
-    public JanelaCadastro(){
-       pessoaDao = new JDBCPessoaDao();
+    protected JanelaCadastro(PessoaDao pessoaDao){
+       this.pessoaDao = pessoaDao;
     }
 
     public void initialize(){
@@ -47,7 +45,7 @@ public class JanelaCadastro {
 
     @FXML
     protected void cancelar(){
-        mudaCena(JANELALOGIN, (aClass)-> new JanelaLogin());
+        mudaCena(JANELALOGIN, (aClass)-> new JanelaLogin(pessoaDao));
     }
 
     @FXML
@@ -65,7 +63,7 @@ public class JanelaCadastro {
                     System.out.println("Cadastrado no banco!");
                     /*Alert alert = new Alert(Alert.AlertType.INFORMATION,"CADASTRADO COM SUCESSO");
                     alert.showAndWait();*/
-                    mudaCena(MENU, (aClass)-> new JanelaMain());
+                    mudaCena(MENU, (aClass)-> new JanelaMain(pessoaDao));
                 }
             } catch (SQLException sqlException) {
                 sqlException.printStackTrace();

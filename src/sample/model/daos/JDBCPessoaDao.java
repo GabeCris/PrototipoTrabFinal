@@ -1,5 +1,6 @@
 package sample.model.daos;
 
+import sample.model.FabricaConexoes;
 import sample.model.Pessoa;
 
 import java.sql.Connection;
@@ -9,9 +10,16 @@ import java.sql.SQLException;
 
 public class JDBCPessoaDao implements PessoaDao{
 
+    private FabricaConexoes fabricaConexoes;
+
+    public JDBCPessoaDao(FabricaConexoes fabricaConexoes){
+        this.fabricaConexoes = fabricaConexoes;
+    }
+
     @Override
     public boolean cadastrar(Pessoa p) throws SQLException {
-        Connection conn = DriverManager.getConnection("jdbc:sqlite:pessoas.sqlite");
+        Connection conn = fabricaConexoes.getConnection();
+
         String sql = "INSERT INTO pessoas(nome, senha) VALUES(?,?)";
 
         PreparedStatement pstmt = conn.prepareStatement(sql);

@@ -15,12 +15,12 @@
             <Font name="Arial Black" size="39.0" />
          </font>
       </Button>
-      <Button onAction="#tutorial" layoutX="138.0" layoutY="386.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="275.0" styleClass="botaomenu" stylesheets="@../css/interface.css" text="TUTORIAL" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+      <Button layoutX="138.0" layoutY="386.0" mnemonicParsing="false" onAction="#tutorial" prefHeight="66.0" prefWidth="275.0" styleClass="botaomenu" stylesheets="@../css/interface.css" text="TUTORIAL" textAlignment="CENTER" textFill="WHITE" wrapText="true">
          <font>
             <Font name="Arial Black" size="39.0" />
          </font>
       </Button>
-      <Button onAction="#deslogar" layoutX="110.0" layoutY="470.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="332.0" styleClass="botaotexto" stylesheets="@../css/interface.css" text="DESEJA DESLOGAR? CLIQUE AQUI" textAlignment="CENTER" textFill="WHITE">
+      <Button layoutX="110.0" layoutY="470.0" mnemonicParsing="false" onAction="#deslogar" prefHeight="32.0" prefWidth="332.0" styleClass="botaotexto" stylesheets="@../css/interface.css" text="DESEJA DESLOGAR? CLIQUE AQUI" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
@@ -42,5 +42,15 @@
       </Label>
       <Line endX="155.0" layoutX="160.0" layoutY="223.0" startX="-34.0" stroke="WHITE" strokeWidth="4.0" />
       <Line endX="114.0" layoutX="253.0" layoutY="75.0" startX="-63.0" stroke="WHITE" strokeWidth="4.0" />
+      <Label alignment="CENTER" layoutX="196.0" layoutY="561.0" prefHeight="27.0" prefWidth="139.0" style="-fx-background-color: #121c86;" text="      GabeCris" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Aharoni Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="209.0" layoutY="560.0" prefHeight="32.0" prefWidth="30.0" text="©" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Aharoni Bold" size="27.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

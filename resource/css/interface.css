@@ -8,15 +8,22 @@
     -fx-background-color:  #121c86;
 }
 
-
-
 .redondo:hover{
     -fx-cursor: hand;
     -fx-border-radius: 150;
     -fx-border-color: #121c86;
     -fx-border-width: 7;
+    -fx-wrap-text: "Eae";
 }
 
+.ab{
+    -fx-font-size: 12;
+    -fx-translate-x: 24;
+    -fx-translate-y: 24;
+    -fx-text-fill: rgba(18, 28, 134, 0.91);
+    -fx-font-family: "Arial Black";
+    -fx-font-weight: bold;
+}
 
 .clicado:hover{
     -fx-cursor: closed_hand;
@@ -37,6 +44,29 @@
     -fx-font-family: "Arial Black";
     -fx-font-weight: bold;
 
+}
+
+.botaoNoJogo{
+    -fx-border-radius: 150;
+    -fx-border-width: 3;
+    -fx-border-color: white;
+    -fx-background-radius: 150;
+    -fx-background-color: #121c86;
+    -fx-cursor: hand;
+    -fx-text-fill: white;
+    -fx-font-size: 13;
+    -fx-font-family: "Arial Black";
+    -fx-font-weight: bold;
+}
+
+.botaoNoJogo:hover{
+    -fx-background-color: #2023d7;
+    -fx-font-size: 11;
+}
+
+.botaoNoJogo:selected{
+    -fx-background-color: #2023d7;
+    -fx-font-size: 11;
 }
 
 .botaomenu{

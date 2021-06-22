@@ -11,6 +11,9 @@ import javafx.util.Callback;
 import sample.controller.JanelaCadastro;
 import sample.controller.JanelaLogin;
 import sample.controller.JanelaMain;
+import sample.model.FabricaConexoes;
+import sample.model.daos.JDBCPessoaDao;
+import sample.model.daos.PessoaDao;
 
 
 public class Main extends Application {
@@ -29,8 +32,15 @@ public class Main extends Application {
     public static final String JANELACADASTRO = "/fxml/janelinhaCadastro.fxml";
     public static final String JANELATUTORIAL = "/fxml/janelinhaTutorial.fxml";
 
-
     private static StackPane base;
+
+    private FabricaConexoes fabricaConexoes;
+    private PessoaDao pessoaDao;
+
+    private void alocaDaos(){
+        fabricaConexoes = new FabricaConexoes();
+        pessoaDao = new JDBCPessoaDao(fabricaConexoes);
+    }
 
     public static void mudaCena(String fxml, Callback controllerFactory) {
         try {
@@ -57,6 +67,7 @@ public class Main extends Application {
     @Override
     public void start(Stage stage) throws Exception {
 
+        alocaDaos();
         base = new StackPane();
 
 
@@ -64,7 +75,7 @@ public class Main extends Application {
         stage.setTitle("CONNECT");
 
         //mudaCena(MENU, (aClass)->new JanelaMain());
-        mudaCena(JANELALOGIN, (aClass)-> new JanelaLogin());
+        mudaCena(JANELALOGIN, (aClass)-> new JanelaLogin(pessoaDao));
         //mudaCena(JANELACADASTRO, (aClass)-> new JanelaCadastro());
 
         stage.setResizable(false);

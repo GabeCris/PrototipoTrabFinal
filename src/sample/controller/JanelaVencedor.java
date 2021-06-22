@@ -8,32 +8,19 @@ import javafx.scene.text.Text;
 import sample.Main;
 import sample.model.Jogador;
 import sample.model.Jogo;
+import sample.model.daos.PessoaDao;
 
 import java.awt.*;
 
 
 public class JanelaVencedor{
 
-    @FXML
-    private Rectangle rtg;
-
     private Jogo jogo;
-    private JanelaJogo janelaJogo;
+    private PessoaDao pessoaDao;
 
     public JanelaVencedor(Jogo jogo) {
         this.jogo = jogo;
-        //mudaRTG();
-    }
-
-    public JanelaVencedor(JanelaJogo janelaJogo){
-
-    }
-
-
-
-    private void mudaRTG(){
-        rtg.setFill(janelaJogo.rtg.getFill());
-
+        this.pessoaDao = pessoaDao;
     }
 
 
@@ -42,7 +29,7 @@ public class JanelaVencedor{
     @FXML
     protected void menu(ActionEvent e){
         System.out.println("AAAAAAAA FAFA");
-        Main.mudaCena(Main.MENU, (aClass)-> new JanelaMain());
+        Main.mudaCena(Main.MENU, (aClass)-> new JanelaMain(pessoaDao));
 
     }
 

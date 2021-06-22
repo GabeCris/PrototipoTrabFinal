@@ -2,6 +2,7 @@
 
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.shape.Rectangle?>
@@ -36,5 +37,15 @@
       </Text>
       <Rectangle fx:id="rtg" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="23.0" layoutX="216.0" layoutY="340.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="119.0" />
       <Line endX="298.0" layoutX="158.0" layoutY="236.0" startX="-63.0" stroke="WHITE" strokeWidth="4.0" />
+      <Label alignment="CENTER" layoutX="196.0" layoutY="561.0" prefHeight="27.0" prefWidth="139.0" style="-fx-background-color: #121c86;" text="      GabeCris" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Aharoni Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="209.0" layoutY="560.0" prefHeight="32.0" prefWidth="30.0" text="©" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Aharoni Bold" size="27.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

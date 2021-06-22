@@ -5,22 +5,19 @@ import javafx.scene.paint.Color;
 import sample.controller.JanelaJogo;
 
 
-public class Jogo extends Exception{
-    public static int N_COLS = 7;
-    public static int N_LIN = 6;
+public class Jogo{
+    public static int LIN = 6;
+    public static int COL = 7;
 
-    public static int[][] matriz;
+    public int[][] matriz;
     public int vez = 0;
 
     private Jogador jogador1;
     private Jogador jogador2;
     private JanelaJogo janelaJogo;
 
-    public int p1 = 0;
-    public int p2 = 0;
-
     public Jogo(Jogador jogador1, Jogador jogador2){
-        matriz = new int[N_COLS][N_LIN];
+        matriz = new int[COL][LIN];
         inicializaMatriz();
         this.jogador1 = jogador1;
         this.jogador2 = jogador2;
@@ -53,8 +50,8 @@ public class Jogo extends Exception{
     public void inicializaMatriz() {
 
 
-        for (int i = 0; i < N_COLS; i++) {
-            for (int j = 0; j < N_LIN; j++) {
+        for (int i = 0; i < COL; i++) {
+            for (int j = 0; j < LIN; j++) {
                 matriz[i][j] = 0;
             }
         }
@@ -92,7 +89,8 @@ public class Jogo extends Exception{
                         matriz[i][j+2] == player &&
                         matriz[i][j+3] == player){
                     System.out.println("GANHOU");
-                    placar();
+                    inicializaMatriz();
+                    JanelaJogo.janelaVencedor();
                 }
             }
         }
@@ -104,7 +102,8 @@ public class Jogo extends Exception{
                         matriz[i+2][j] == player &&
                         matriz[i+3][j] == player){
                     System.out.println("GANHOU");
-                    placar();
+                    inicializaMatriz();
+                    JanelaJogo.janelaVencedor();
                 }
             }
         }
@@ -116,7 +115,8 @@ public class Jogo extends Exception{
                         matriz[i-2][j+2] == player &&
                         matriz[i-3][j+3] == player){
                     System.out.println("GANHOU");
-                    placar();
+                    inicializaMatriz();
+                    JanelaJogo.janelaVencedor();
                 }
             }
         }
@@ -128,44 +128,11 @@ public class Jogo extends Exception{
                         matriz[i+2][j+2] == player &&
                         matriz[i+3][j+3] == player){
                     System.out.println("GANHOU");
-                    placar();
+                    inicializaMatriz();
+                    JanelaJogo.janelaVencedor();
                 }
             }
         }
-
-    }
-
-    public void placar(){
-        System.out.println("ENTROU NO PLACAR");
-        if(vez %2 == 0){
-            p1++;
-        }
-
-       else  if(vez %2 != 0){
-            p2++;
-        }
-
-        System.out.println("PLACAR PLAYER 1: "+p1);
-        System.out.println("PLACAR PLAYER 2: "+p2);
-        //janelaJogo.placar();
-        //nomeVencedor();
-        //janelaJogo.janelaVencedor();
-        inicializaMatriz();
-        JanelaJogo.janelaVencedor();
-    }
-
-
-
-
-    public void abrirAlert(){
-
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle("VENCEDOR");
-        alert.setHeaderText("VENCEDOR DA RODADA: JOGADOR "+player);
-
-        alert.setContentText("PLACAR ATUAL: JOGADOR A 1 x 0 JOGADOR B");
-        inicializaMatriz();
-        alert.show();
 
     }
 
@@ -175,7 +142,7 @@ public class Jogo extends Exception{
     }
 
     public boolean registraJogada(int i, int j){
-        if(j == Jogo.N_LIN -1 || matriz[i][j+1] ==  1 || matriz[i][j+1] == 2) {
+        if(j == Jogo.LIN -1 || matriz[i][j+1] ==  1 || matriz[i][j+1] == 2) {
             jogadorDaVez(i, j);
             return true;
         }
@@ -183,23 +150,6 @@ public class Jogo extends Exception{
         return false;
     }
 
-    /*public String nomeVencedor(){
-         String vencedor = null;
-
-        if(player == 1){
-           vencedor = jogador1.getNome();
-        }
-
-        else if(player == 2){
-           vencedor =  jogador2.getNome();
-        }
-
-        System.out.println(vencedor);
-        System.out.println("Era pra mostrar o vencedor em cima");
-
-        return vencedor;
-    }
-*/
     public int getValor(int i, int j){
         return matriz[i][j];
     }
