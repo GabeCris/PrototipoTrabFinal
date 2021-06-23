@@ -32,7 +32,7 @@ public class JanelaMain {
 
     @FXML
     protected void deslogar(ActionEvent e){
-        Main.mudaCena(Main.JANELALOGIN, (aClass)-> new JanelaLogin(pessoaDao));
+       Main.carregaLogin();
 
     }
 

@@ -102,12 +102,6 @@ public class JanelaOpcoes {
 
         int opcao =0;
 
-        //nomePLayer1 = nomeP1.getText();
-
-
-       // System.out.println("Nome P1 "+nomePLayer1);
-
-
         if(redP1.isSelected()){
             opcao = 0;
         }
