@@ -195,3 +195,45 @@
     -fx-font-weight: bold;
 
 }
+
+.radiusRight{
+    -fx-border-radius: 150;
+    -fx-background-radius: 150;
+    -fx-border-width: 4;
+    -fx-font-size: 22;
+    -fx-border-color: white;
+    -fx-background-color: #121c86;
+    -fx-font-family: "Arial Black";
+    -fx-font-weight: bold;
+}
+
+.radiusLeft{
+    -fx-border-radius: 150;
+    -fx-background-radius: 150;
+    -fx-border-width: 4;
+    -fx-font-size: 22;
+    -fx-border-color: white;
+    -fx-background-color: #121c86;
+    -fx-font-family: "Arial Black";
+    -fx-font-weight: bold;
+}
+
+.radiusRight:hover{
+    -fx-translate-x: 195;
+    -fx-cursor: hand;
+}
+
+.radiusLeft:hover{
+    -fx-translate-x: -195;
+    -fx-cursor: hand;
+}
+
+.radiusLeft:pressed{
+    -fx-background-color: #2023d7;
+}
+
+.chkbox:pressed{
+    -fx-cursor: hand;
+}
+
+

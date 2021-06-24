@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.shape.Rectangle?>
@@ -12,6 +17,11 @@
 
 <Pane prefHeight="600.0" prefWidth="550.0" style="-fx-background-color: #121c86;" xmlns="http://javafx.com/javafx/" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.JanelaLogin">
    <children>
+      <TextField fx:id="tfSenha" alignment="CENTER" focusTraversable="false" layoutX="96.0" layoutY="288.0" prefHeight="41.0" prefWidth="358.0" promptText="INFORME A SENHA" styleClass="textFields" stylesheets="@../css/interface.css">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </TextField>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="557.0" layoutX="27.0" layoutY="22.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="5.0" width="496.0" />
       <TextField fx:id="tfUser" alignment="CENTER" focusTraversable="false" layoutX="96.0" layoutY="223.0" prefHeight="41.0" prefWidth="358.0" promptText="INFORME O NOME DO USUÁRIO" styleClass="textFields" stylesheets="@../css/interface.css">
          <font>
@@ -49,5 +59,21 @@
             <Font name="Aharoni Bold" size="27.0" />
          </font>
       </Label>
+      <ImageView fitHeight="27.0" fitWidth="24.0" layoutX="402.0" layoutY="297.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/eye.png" />
+         </image>
+         <effect>
+            <ColorAdjust brightness="1.0" />
+         </effect>
+      </ImageView>
+      <CheckBox fx:id="cbView" alignment="TOP_LEFT" contentDisplay="CENTER" graphicTextGap="10.0" layoutX="401.0" layoutY="295.0" mnemonicParsing="false" onAction="#verificaSenha" opacity="0" prefHeight="4.0" prefWidth="21.0" styleClass="chkbox" stylesheets="@../css/interface.css">
+         <font>
+            <Font size="19.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="CLOSED_HAND" />
+         </cursor>
+      </CheckBox>
    </children>
 </Pane>

@@ -2,9 +2,7 @@ package sample.controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Alert;
-import javafx.scene.control.DialogPane;
-import javafx.scene.control.PasswordField;
+import javafx.scene.control.*;
 import javafx.scene.control.TextField;
 import org.w3c.dom.Text;
 import sample.AuthService;
@@ -23,6 +21,12 @@ public class JanelaLogin {
 
     @FXML
     private PasswordField pfSenha;
+
+    @FXML
+    private TextField tfSenha;
+
+    @FXML
+    private CheckBox cbView;
 
     private PessoaDao pessoaDao;
     private AuthService authService;
@@ -72,6 +76,18 @@ public class JanelaLogin {
         Main.carregaCadastro();
     }
 
+    @FXML
+    private void verificaSenha(ActionEvent e){
+        if(cbView.isSelected()){
+            tfSenha.setText(pfSenha.getText());
+            tfSenha.setVisible(true);
+            pfSenha.setVisible(false);
+            return;
+        }
+        pfSenha.setText(tfSenha.getText());
+        pfSenha.setVisible(true);
+        tfSenha.setVisible(false);
+    }
 
 
 }
