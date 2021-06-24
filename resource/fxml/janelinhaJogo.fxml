@@ -17,8 +17,8 @@
          </cursor>
       </Rectangle>
         <GridPane fx:id="root" layoutX="46.0" layoutY="40.0" prefHeight="429.0" prefWidth="458.0" styleClass="fundo" stylesheets="@../css/interface.css" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" />
-        <Rectangle fx:id="rtg" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="23.0" layoutX="362.0" layoutY="515.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="119.0" />
-      <Text fx:id="invalida" fill="WHITE" layoutX="138.0" layoutY="551.0" stroke="BLACK" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="0.0" text="..." textAlignment="CENTER" wrappingWidth="219.4033203125">
+        <Rectangle fx:id="rtg" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="23.0" layoutX="362.0" layoutY="486.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="119.0" />
+      <Text fx:id="invalida" fill="WHITE" layoutX="80.0" layoutY="547.0" stroke="BLACK" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="0.0" text="..." textAlignment="CENTER" wrappingWidth="219.4033203125">
          <font>
             <Font name="Arial Black" size="19.0" />
          </font>
@@ -28,12 +28,7 @@
             <Font name="Arial Black" size="28.0" />
          </font>
       </Text>
-      <Text fx:id="txtNome" fill="WHITE" layoutX="358.0" layoutY="504.0" stroke="BLACK" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="0.0" text="JOGADOR" textAlignment="CENTER" wrappingWidth="127.005859375">
-         <font>
-            <Font name="Arial Black" size="15.0" />
-         </font>
-      </Text>
-      <Button layoutX="62.0" layoutY="527.0" mnemonicParsing="false" onAction="#menu" prefHeight="34.0" prefWidth="71.0" styleClass="botaoNoJogo" stylesheets="@../css/interface.css" text="MENU" />
+      <Button layoutX="386.0" layoutY="522.0" mnemonicParsing="false" onAction="#menu" prefHeight="34.0" prefWidth="71.0" styleClass="botaoNoJogo" stylesheets="@../css/interface.css" text="MENU" />
       <Label alignment="CENTER" layoutX="196.0" layoutY="561.0" prefHeight="27.0" prefWidth="139.0" style="-fx-background-color: #121c86;" text="      GabeCris" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="Aharoni Bold" size="17.0" />

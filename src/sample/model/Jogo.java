@@ -8,6 +8,7 @@ import sample.controller.JanelaJogo;
 public class Jogo{
     public static int LIN = 6;
     public static int COL = 7;
+    public int flag;
 
     public int[][] matriz;
     public int vez = 0;
@@ -77,9 +78,11 @@ public class Jogo{
 
         if(vez%2==0){
             player = 1;
+            flag = player;
         }
         else if(vez%2!=0){
             player = 2;
+            flag = player;
         }
 
         for(int i = 0; i<matriz.length; i++){

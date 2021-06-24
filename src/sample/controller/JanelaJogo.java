@@ -1,5 +1,6 @@
 package sample.controller;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
@@ -43,6 +44,7 @@ public class JanelaJogo{
         this.jogador1 = new Jogador();
         this.jogador2 = new Jogador();
         this.jogo = jogo;
+        flegue = JanelaOpcoes.flag;
 
     }
 
@@ -56,6 +58,7 @@ public class JanelaJogo{
         inicializaGridPane();
         colocarPeca();
         System.out.println("Sera");
+
 
     }
 
@@ -95,9 +98,12 @@ public class JanelaJogo{
 
     }
 
+    private int flegue;
+
 
     private void inicializaGridPane() {
 
+        System.out.println("CONTEUDO DE FLAG "+flegue);
         for (int i = 0; i < COL; i++) {
             for(int j = 0; j< LIN; j++){
                 panes[i][j] = new Pane();
@@ -105,19 +111,23 @@ public class JanelaJogo{
                 panes[i][j].setOnMouseClicked((evt)->clicou(evt));
                 root.add(panes[i][j], i,j);
 
-                Label lb = new Label();
-                lb.setText(matrixes[i][j]);
-                lb.getStyleClass().add("ab");
-                panes[i][j].getChildren().add(lb);
-
                 if(jogo.estaVazia(i,j)){
                     panes[i][j].getStyleClass().add("redondo");
                 }
 
-
+               if(flegue == 1){
+                    Label lb = new Label();
+                lb.setText(matrixes[i][j]);
+                lb.getStyleClass().add("ab");
+                panes[i][j].getChildren().add(lb);
+                   System.out.println("ENTROU NA JANELA OPCOES FLAG");
+                }
             }
         }
     }
+
+    private int aux = 0;
+
 
     private void clicou(MouseEvent event){
         int i = 0;

@@ -15,15 +15,26 @@ import java.awt.*;
 
 public class JanelaVencedor{
 
+    @FXML
+    private Rectangle rtg;
+
+    @FXML
+    private Text txtVencedor;
+
     private Jogo jogo;
     private PessoaDao pessoaDao;
+    private Color cor;
 
     public JanelaVencedor(Jogo jogo) {
         this.jogo = jogo;
         this.pessoaDao = pessoaDao;
     }
 
-
+    public void initialize(){
+        txtVencedor.setText("PLAYER "+jogo.flag);
+        Jogador jogador = jogo.jogadorDaVez();
+        rtg.setFill(jogador.getCor());
+    }
 
 
     @FXML

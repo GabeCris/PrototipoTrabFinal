@@ -25,6 +25,15 @@
     -fx-font-weight: bold;
 }
 
+.abVazio{
+    -fx-font-size: 12;
+    -fx-translate-x: 24;
+    -fx-translate-y: 24;
+    -fx-text-fill: rgba(18, 28, 134, 0);
+    -fx-font-family: "Arial Black";
+    -fx-font-weight: bold;
+}
+
 .clicado:hover{
     -fx-cursor: closed_hand;
     -fx-border-radius: 150;

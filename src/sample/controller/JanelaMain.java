@@ -14,6 +14,8 @@ public class JanelaMain {
     @FXML
     private Button btPerfil;
 
+    private String name;
+
     private PessoaDao pessoaDao;
     private JanelaCadastro janelaCadastro;
 
@@ -25,12 +27,10 @@ public class JanelaMain {
 
     }
 
-   /* public void initialize(){
-        String text;
-        text = janelaCadastro.retornaNome();
-
-        System.out.println("O NOME DELE É "+text);
-    }*/
+    public void initialize(){
+        name = JanelaLogin.nome;
+        btPerfil.setText(name);
+    }
 
     @FXML
     protected void game(ActionEvent e){

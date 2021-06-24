@@ -32,13 +32,25 @@
             <Cursor fx:constant="HAND" />
          </cursor></RadioButton>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="GREEN" height="31.0" layoutX="275.0" layoutY="249.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="32.0" />
-      <RadioButton fx:id="greenP1" layoutX="283.0" layoutY="255.0" mnemonicParsing="false" styleClass="rb" stylesheets="@../css/interface.css" textFill="#c60000" toggleGroup="$pecaP1" />
+      <RadioButton fx:id="greenP1" layoutX="283.0" layoutY="255.0" mnemonicParsing="false" styleClass="rb" stylesheets="@../css/interface.css" textFill="#c60000" toggleGroup="$pecaP1">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></RadioButton>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="YELLOW" height="31.0" layoutX="328.0" layoutY="249.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="32.0" />
-      <RadioButton fx:id="yellowP1" layoutX="336.0" layoutY="255.0" mnemonicParsing="false" styleClass="rb" stylesheets="@../css/interface.css" textFill="#c60000" toggleGroup="$pecaP1" />
+      <RadioButton fx:id="yellowP1" layoutX="336.0" layoutY="255.0" mnemonicParsing="false" styleClass="rb" stylesheets="@../css/interface.css" textFill="#c60000" toggleGroup="$pecaP1">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></RadioButton>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="PURPLE" height="31.0" layoutX="384.0" layoutY="249.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="32.0" />
-      <RadioButton fx:id="purpleP1" layoutX="392.0" layoutY="255.0" mnemonicParsing="false" styleClass="rb" stylesheets="@../css/interface.css" textFill="#c60000" toggleGroup="$pecaP1" />
+      <RadioButton fx:id="purpleP1" layoutX="392.0" layoutY="255.0" mnemonicParsing="false" styleClass="rb" stylesheets="@../css/interface.css" textFill="#c60000" toggleGroup="$pecaP1">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></RadioButton>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="GREY" height="31.0" layoutX="436.0" layoutY="249.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="32.0" />
-      <RadioButton fx:id="grayP1" layoutX="444.0" layoutY="255.0" mnemonicParsing="false" styleClass="rb" stylesheets="@../css/interface.css" textFill="#c60000" toggleGroup="$pecaP1" />
+      <RadioButton fx:id="grayP1" layoutX="444.0" layoutY="255.0" mnemonicParsing="false" styleClass="rb" stylesheets="@../css/interface.css" textFill="#c60000" toggleGroup="$pecaP1">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></RadioButton>
       <Text fill="WHITE" layoutX="77.0" layoutY="343.0" stroke="BLACK" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="0.0" text="Player 2" textAlignment="CENTER" wrappingWidth="134.4404296875">
          <font>
             <Font name="Arial Black" size="22.0" />
@@ -48,21 +60,36 @@
       <RadioButton fx:id="redP2" layoutX="231.0" layoutY="325.0" mnemonicParsing="false" styleClass="rb" stylesheets="@../css/interface.css" textFill="#c60000">
          <toggleGroup>
             <ToggleGroup fx:id="pecaP2" />
-         </toggleGroup></RadioButton>
+         </toggleGroup>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></RadioButton>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="GREEN" height="31.0" layoutX="276.0" layoutY="319.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="32.0" />
-      <RadioButton fx:id="greenP2" layoutX="284.0" layoutY="325.0" mnemonicParsing="false" styleClass="rb" stylesheets="@../css/interface.css" textFill="#c60000" toggleGroup="$pecaP2" />
+      <RadioButton fx:id="greenP2" layoutX="284.0" layoutY="325.0" mnemonicParsing="false" styleClass="rb" stylesheets="@../css/interface.css" textFill="#c60000" toggleGroup="$pecaP2">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></RadioButton>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="YELLOW" height="31.0" layoutX="329.0" layoutY="319.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="32.0" />
-      <RadioButton fx:id="yellowP2" layoutX="337.0" layoutY="325.0" mnemonicParsing="false" selected="true" styleClass="rb" stylesheets="@../css/interface.css" textFill="#c60000" toggleGroup="$pecaP2" />
+      <RadioButton fx:id="yellowP2" layoutX="337.0" layoutY="325.0" mnemonicParsing="false" selected="true" styleClass="rb" stylesheets="@../css/interface.css" textFill="#c60000" toggleGroup="$pecaP2">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></RadioButton>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="PURPLE" height="31.0" layoutX="385.0" layoutY="319.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="32.0" />
-      <RadioButton fx:id="purpleP2" layoutX="393.0" layoutY="325.0" mnemonicParsing="false" styleClass="rb" stylesheets="@../css/interface.css" textFill="#c60000" toggleGroup="$pecaP2" />
+      <RadioButton fx:id="purpleP2" layoutX="393.0" layoutY="325.0" mnemonicParsing="false" styleClass="rb" stylesheets="@../css/interface.css" textFill="#c60000" toggleGroup="$pecaP2">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></RadioButton>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="GREY" height="31.0" layoutX="437.0" layoutY="319.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="32.0" />
-      <RadioButton fx:id="grayP2" layoutX="445.0" layoutY="325.0" mnemonicParsing="false" styleClass="rb" stylesheets="@../css/interface.css" textFill="#c60000" toggleGroup="$pecaP2" />
-      <Button fx:id="mainmenu" layoutX="93.0" layoutY="418.0" mnemonicParsing="false" onAction="#menu" prefHeight="71.0" prefWidth="167.0" styleClass="botao" stylesheets="@../css/interface.css" text="MENU" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+      <RadioButton fx:id="grayP2" layoutX="445.0" layoutY="325.0" mnemonicParsing="false" styleClass="rb" stylesheets="@../css/interface.css" textFill="#c60000" toggleGroup="$pecaP2">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></RadioButton>
+      <Button fx:id="mainmenu" layoutX="93.0" layoutY="436.0" mnemonicParsing="false" onAction="#menu" prefHeight="71.0" prefWidth="167.0" styleClass="botao" stylesheets="@../css/interface.css" text="MENU" textAlignment="CENTER" textFill="WHITE" wrapText="true">
          <font>
             <Font name="Arial Black" size="12.0" />
          </font>
       </Button>
-      <Button layoutX="291.0" layoutY="418.0" mnemonicParsing="false" onAction="#jogo" prefHeight="71.0" prefWidth="167.0" styleClass="botao" text="JOGAR" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+      <Button layoutX="291.0" layoutY="436.0" mnemonicParsing="false" onAction="#jogo" prefHeight="71.0" prefWidth="167.0" styleClass="botao" text="JOGAR" textAlignment="CENTER" textFill="WHITE" wrapText="true">
          <font>
             <Font name="Arial Black" size="12.0" />
          </font>
@@ -83,5 +110,15 @@
             <Font name="Aharoni Bold" size="27.0" />
          </font>
       </Label>
+      <Text fill="WHITE" layoutX="192.0" layoutY="403.0" stroke="BLACK" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="0.0" text="Guia" textAlignment="CENTER" wrappingWidth="134.4404296875">
+         <font>
+            <Font name="Arial Black" size="22.0" />
+         </font>
+      </Text>
+      <RadioButton fx:id="rbGuia" layoutX="298.0" layoutY="387.0" mnemonicParsing="false">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </RadioButton>
    </children>
 </AnchorPane>

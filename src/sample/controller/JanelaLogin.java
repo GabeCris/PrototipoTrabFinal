@@ -28,6 +28,8 @@ public class JanelaLogin {
     @FXML
     private CheckBox cbView;
 
+    public static String nome;
+
     private PessoaDao pessoaDao;
     private AuthService authService;
 
@@ -48,6 +50,9 @@ public class JanelaLogin {
         String username = tfUser.getText();
         String password = pfSenha.getText();
 
+        nome = String.valueOf(tfUser.getText());
+        System.out.println("O TEXT É "+tfUser.getText());
+
         try {
             if(authService.login(username, password)){
                 Main.carregaPrincipal();
@@ -61,6 +66,7 @@ public class JanelaLogin {
         alert.setHeaderText("Login inválido!");
         alert.setContentText("Usuário ou senha inválidos");
         alert.showAndWait();
+
     }
 
     private void dialogSet(){
@@ -88,6 +94,7 @@ public class JanelaLogin {
         pfSenha.setVisible(true);
         tfSenha.setVisible(false);
     }
+
 
 
 }

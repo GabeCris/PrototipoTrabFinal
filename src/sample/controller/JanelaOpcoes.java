@@ -13,37 +13,39 @@ import sample.model.Jogo;
 public class JanelaOpcoes {
 
     @FXML
-    public RadioButton redP1;
+    private RadioButton redP1;
 
     @FXML
-    public RadioButton greenP1;
+    private RadioButton greenP1;
 
     @FXML
-    public RadioButton yellowP1;
+    private RadioButton yellowP1;
 
     @FXML
-    public RadioButton purpleP1;
+    private RadioButton purpleP1;
 
     @FXML
-    public RadioButton grayP1;
+    private RadioButton grayP1;
 
     @FXML
-    public RadioButton redP2;
+    private RadioButton redP2;
 
     @FXML
-    public RadioButton greenP2;
+    private RadioButton greenP2;
 
     @FXML
-    public RadioButton yellowP2;
+    private RadioButton yellowP2;
 
     @FXML
-    public RadioButton purpleP2;
+    private RadioButton purpleP2;
 
     @FXML
-    public RadioButton grayP2;
+    private RadioButton grayP2;
 
     @FXML
-    public ToggleGroup pecaP1;
+    public RadioButton rbGuia;
+
+    public static int flag;
 
     private DialogPane dialog;
 
@@ -68,6 +70,7 @@ public class JanelaOpcoes {
 
     public void initialize(){
         dialogSet();
+        rbGuia.setSelected(false);
     }
 
     @FXML
@@ -78,6 +81,7 @@ public class JanelaOpcoes {
 
     @FXML
     public void jogo(ActionEvent e){
+        verificaGuia();
         pecaPlayer1();
         pecaPlayer2();
         verificaPecas();
@@ -95,6 +99,19 @@ public class JanelaOpcoes {
         else{
             Main.mudaCena(Main.JANELAJOGO, (aClass) -> new JanelaJogo(jogo));
         }
+    }
+
+    public void verificaGuia(){
+        if(rbGuia.isSelected()){
+            flag = 1;
+            System.out.println("CONTEUDO DE FLAG "+flag);
+        }
+        else{
+            flag = 0;
+            System.out.println("CONTEUDO DE FLAG "+flag);
+
+        }
+
     }
 
     public void pecaPlayer1(){
@@ -124,7 +141,7 @@ public class JanelaOpcoes {
         }
 
         jogador1.setCor(cores[opcao]);
-        //jogador1.setNome(nomePLayer1);
+        jogador1.setVez("1");
 
 
     }
@@ -158,7 +175,7 @@ public class JanelaOpcoes {
         }
 
         jogador2.setCor(cores[opcao]);
-       // jogador2.setNome(nomePLayer2);
+        jogador2.setVez("2");
     }
 
     private void dialogSet(){
