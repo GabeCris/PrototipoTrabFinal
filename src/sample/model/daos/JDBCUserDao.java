@@ -20,7 +20,7 @@ public class JDBCUserDao implements UserDao{
         User user = null;
 
         Connection conn = fabricaConexoes.getConnection();
-        String sql = "SELECT * FROM pessoas WHERE nome=? and senha=?";
+        String sql = "SELECT * FROM users WHERE nome=? and senha=?";
         PreparedStatement pstm = conn.prepareStatement(sql);
 
         pstm.setString(1, username);

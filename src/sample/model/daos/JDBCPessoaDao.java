@@ -20,7 +20,7 @@ public class JDBCPessoaDao implements PessoaDao{
     public boolean cadastrar(Pessoa p) throws SQLException {
         Connection conn = fabricaConexoes.getConnection();
 
-        String sql = "INSERT INTO pessoas(nome, senha) VALUES(?,?)";
+        String sql = "INSERT INTO users(nome, senha) VALUES(?,?)";
 
         PreparedStatement pstmt = conn.prepareStatement(sql);
 

@@ -28,8 +28,17 @@ public class JanelaMain {
     }
 
     public void initialize(){
-        name = JanelaLogin.nome;
-        btPerfil.setText(name);
+        if(JanelaCadastro.flag == 0){
+            name = JanelaLogin.nome;
+            btPerfil.setText(name);
+        }
+
+        else{
+            name = JanelaCadastro.name;
+            btPerfil.setText(name);
+        }
+        JanelaCadastro.flag = 0;
+
     }
 
     @FXML

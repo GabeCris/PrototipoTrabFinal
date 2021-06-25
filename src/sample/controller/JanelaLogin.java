@@ -66,6 +66,8 @@ public class JanelaLogin {
         alert.setHeaderText("Login inválido!");
         alert.setContentText("Usuário ou senha inválidos");
         alert.showAndWait();
+        tfUser.setText("");
+        pfSenha.setText("");
 
     }
 

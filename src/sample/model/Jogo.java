@@ -10,6 +10,8 @@ public class Jogo{
     public static int COL = 7;
     public int flag;
 
+
+
     public int[][] matriz;
     public int vez = 0;
 

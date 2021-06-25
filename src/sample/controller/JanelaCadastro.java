@@ -28,6 +28,9 @@ public class JanelaCadastro {
 
     private DialogPane dialog;
 
+    public static int flag = 0;
+    public static String name;
+
 
     private int auxS = 0;
     private int auxL = 0;
@@ -68,6 +71,8 @@ public class JanelaCadastro {
                     alert.setHeaderText("Cadastrado com sucesso!");
                     alert.setContentText(nome+" foi cadastrado no sistema");
                     alert.showAndWait();
+                    flag = 1;
+                    name = nome;
                     mudaCena(MENU, (aClass)-> new JanelaMain(pessoaDao));
                 }
             } catch (SQLException sqlException) {

@@ -39,5 +39,16 @@
             <Font name="Aharoni Bold" size="27.0" />
          </font>
       </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#121c86" height="200.0" layoutX="248.0" layoutY="-90.0" rotate="90.0" stroke="#121c86" strokeType="INSIDE" strokeWidth="0.0" width="55.0" />
+      <Label alignment="CENTER" layoutX="156.0" layoutY="10.0" prefHeight="32.0" prefWidth="219.0" text="CONNECT" textFill="WHITE">
+         <font>
+            <Font name="Arial Black" size="22.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="319.0" layoutY="3.0" prefHeight="32.0" prefWidth="43.0" rotate="32.6" text="4" textFill="WHITE">
+         <font>
+            <Font name="Arial Black" size="28.0" />
+         </font>
+      </Label>
     </children>
 </Pane>
